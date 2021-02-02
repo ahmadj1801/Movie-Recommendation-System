@@ -33,3 +33,12 @@ def clean_titles(titles):
 
 read_data()
 stats()
+
+# import pyodbc
+
+# cnxn = pyodbc.connect('DRIVER={CData ODBC Driver for Access};DataSource = ..\Database\Movies.accdb;')
+# cursor = cnxn.cursor()
+# cursor.execute("SELECT OrderName, Freight FROM Orders WHERE ShipCity = 'New York'")
+# rows = cursor.fetchall()
+# for row in rows:
+    #print(row.OrderName, row.Freight)
