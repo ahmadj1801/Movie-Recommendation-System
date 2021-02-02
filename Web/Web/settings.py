@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'Web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'movies',
+        'USER': 'root',
+        'PASSWORD': 'mySql3000root',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
