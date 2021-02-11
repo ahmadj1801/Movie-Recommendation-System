@@ -11,9 +11,6 @@ window.geometry('500x200')
 window.rowconfigure([0, 1, 2, 3], minsize=50)
 window.columnconfigure([0, 1, 2], minsize=100)
 
-# Place holder
-placeholder = tkinter.Label(window, text=" ").grid(row=0, column=0)
-
 # Heading
 lbl_intro = tkinter.Label(window, text='Welcome to the Movie Recommendation System!',
                           font=("Arial Bold", 10)).grid(row=0, column=1)
