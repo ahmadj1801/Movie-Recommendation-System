@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+from Application import HomeForm
 
 movies = ratings = None
 movie_names = genres = average_ratings = None
@@ -39,3 +40,4 @@ def clean_titles(titles):
 
 read_data()
 stats()
+home_form = HomeForm()
