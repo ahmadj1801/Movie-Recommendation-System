@@ -1,0 +1,25 @@
+import pandas as pd
+import re
+
+
+movies = ratings = None
+movie_names = genres = average_ratings = None
+
+
+# Data Statistics
+# Movie ID, Movie Name, Total Rating, Average Rating, Number of votes
+def stats():
+    global movie_names, genres, average_ratings
+    movie_names = movies['title'].unique()
+    movie_names = clean_titles(movie_names)
+    average_ratings = pd.merge(movies, ratings, left_on='movieId', right_on='movieId',
+                               how='left').drop(['userId', 'timestamp'], axis=1).groupby('movieId').mean()
+    print(average_ratings)
+
+
+def clean_titles(titles):
+    new_movie_names = []
+    for t in titles:
+        new_title = re.sub('\([0-9]{4}\)', '', t)
+        new_movie_names.append(new_title.strip())
+    return new_movie_names
