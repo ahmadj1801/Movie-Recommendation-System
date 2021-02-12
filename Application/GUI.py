@@ -2,7 +2,7 @@ import tkinter
 
 
 def calculate_centre(window):
-    position_right = position_left = 0
+    position_right = position_down = 0
     win_width = window.winfo_reqwidth()
     win_height = window.winfo_reqheight()
     position_right = int(window.winfo_screenwidth()/2 - win_width/2)
