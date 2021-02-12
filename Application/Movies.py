@@ -1,14 +1,20 @@
 import pandas as pd
 import re
 
-movies = ratings = None
 
+class MoviesData:
 
-# Read CSV Files
-def read_data():
-    global movies, ratings
-    ratings = pd.read_csv("../Data/ratings.csv")
-    movies = pd.read_csv("../Data/movies.csv")
+    movies = ratings = " "
 
+    def __init__(self):
+        self.read_data()
 
-read_data()
+    # Read CSV Files
+    def read_data(self):
+        self.ratings = pd.read_csv("../Data/ratings.csv")
+        self.movies = pd.read_csv("../Data/movies.csv")
+
+    def get_movie_names(self):
+        movie_names = list(self.movies['title'])
+        movie_names.sort()
+        return movie_names

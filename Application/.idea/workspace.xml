@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Gui Script containing classes for each form&#10;Main Class">
+    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Moved stats code form Movies.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +118,7 @@
       <workItem from="1613076067823" duration="2581000" />
       <workItem from="1613119605733" duration="3929000" />
       <workItem from="1613133390467" duration="2221000" />
-      <workItem from="1613148917106" duration="1218000" />
+      <workItem from="1613148917106" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="Test Gui form">
       <created>1613047994402</created>
@@ -161,7 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1613135399010</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Small changes">
+      <created>1613150328683</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613150328683</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Small changes">
+      <created>1613150402415</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613150402415</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Moved stats code form Movies.py">
+      <created>1613150962094</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613150962094</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,40 +206,42 @@
     <MESSAGE value="Home Screen GUI components" />
     <MESSAGE value="Initial classes for form handling" />
     <MESSAGE value="Gui Script containing classes for each form&#10;Main Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gui Script containing classes for each form&#10;Main Class" />
+    <MESSAGE value="Small changes" />
+    <MESSAGE value="Moved stats code form Movies.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved stats code form Movies.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613047137241">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1613047137241" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1613150177687">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1613153824195">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613150177687" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1613150177687">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613153824195" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1613153824195">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613150177687" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1613150177687">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613153824195" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1613153824195">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613150177687" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1613150177687">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613153824195" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1613153824195">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613150177687" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613153824195" />
     <state x="184" y="28" key="SettingsEditor" timestamp="1613047389761">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613135413991">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613150414800">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613135413991" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613150414800" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1613150240781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Application$Movies.coverage" NAME="Movies Coverage Results" MODIFIED="1613124259971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1613153946104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Application$Movies.coverage" NAME="Movies Coverage Results" MODIFIED="1613152949555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

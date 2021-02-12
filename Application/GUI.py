@@ -1,12 +1,15 @@
 import tkinter
+from tkinter import ttk
+
+from Movies import MoviesData
 
 
 def calculate_centre(window):
     position_right = position_down = 0
     win_width = window.winfo_reqwidth()
     win_height = window.winfo_reqheight()
-    position_right = int(window.winfo_screenwidth()/2 - win_width/2)
-    position_down = int(window.winfo_screenheight()/2 - win_height/2)
+    position_right = int(window.winfo_screenwidth() / 2 - win_width / 2)
+    position_down = int(window.winfo_screenheight() / 2 - win_height / 2)
     return position_right, position_down
 
 
@@ -84,10 +87,24 @@ class MoviesForm:
         window = tkinter.Tk()
         window.title("Movies")
         window.geometry('400x400')
-        window.rowconfigure([0, 1, 2, 3], minsize=50)
+        window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=50)
         window.columnconfigure([0, 1, 2], minsize=100)
-        self.__lbl_intro = tkinter.Label(window, text='Movies',
-                                         font=("Arial Bold", 15)).grid(row=0, column=1)
+        # self.__lbl_intro = tkinter.Label(window, text='Movies',
+        #  font=("Arial Bold", 15)).grid(row=0, column=1)
+        movie_data = MoviesData()
+        self.__drp_movie = ttk.Combobox(window, values=movie_data.get_movie_names()).grid(row=0, column=1)
+        self.__btn_submit = tkinter.Button(window, text="Submit", width=10,
+                                           command=self.btn_submit_click).grid(row=0, column=2)
+
+    def btn_submit_click(self):
+        # Get Text from Combo box
+        # Look for Picture Online
+        # Look for Ratings
+        # Set Name in the Label
+        pass
+
+    def populate_combobox(self):
+        pass
 
 
 # ====================================END MoviesForm Class================================================
@@ -103,6 +120,5 @@ class MovieRecommendationForm:
         window.columnconfigure([0, 1, 2], minsize=100)
         self.__lbl_intro = tkinter.Label(window, text='Movie Recommendation',
                                          font=("Arial Bold", 15)).grid(row=0, column=1)
-
 
 # ====================================END MovieRecommendationForm Class================================================
