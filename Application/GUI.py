@@ -1,6 +1,15 @@
 import tkinter
 
 
+def calculate_centre(window):
+    position_right = position_left = 0
+    win_width = window.winfo_reqwidth()
+    win_height = window.winfo_reqheight()
+    position_right = int(window.winfo_screenwidth()/2 - win_width/2)
+    position_down = int(window.winfo_screenheight()/2 - win_height/2)
+    return position_right, position_down
+
+
 class HomeForm:
     # Private Class attributes
     __lbl_intro = __btn_movies = __btn_stats = __btn_recommendation = ''
@@ -10,8 +19,9 @@ class HomeForm:
         window = tkinter.Tk()
         # Window Title
         window.title("Movie System")
+        pos_right, pos_down = calculate_centre(window)
         # Window Size
-        window.geometry('500x200')
+        window.geometry("+{}+{}".format(pos_right, pos_down))
         # Set Row sizes
         window.rowconfigure([0, 1, 2, 3], minsize=50)
         # Set Column Sizes
@@ -61,7 +71,7 @@ class StatisticsForm:
         window.title("Data Visualization")
         window.geometry('400x400')
         window.rowconfigure([0, 1, 2, 3], minsize=50)
-        window.columnconfigure([0, 1, 2, 3], minsize=100)
+        window.columnconfigure([0, 1, 2], minsize=100)
         self.__lbl_intro = tkinter.Label(window, text='Data Visualisation',
                                          font=("Arial Bold", 15)).grid(row=0, column=1)
 
@@ -74,8 +84,8 @@ class MoviesForm:
         window = tkinter.Tk()
         window.title("Movies")
         window.geometry('400x400')
-        window.rowconfigure([0, 1, 2, 3], minsize=100)
-        window.columnconfigure([0, 1, 2, 3], minsize=100)
+        window.rowconfigure([0, 1, 2, 3], minsize=50)
+        window.columnconfigure([0, 1, 2], minsize=100)
         self.__lbl_intro = tkinter.Label(window, text='Movies',
                                          font=("Arial Bold", 15)).grid(row=0, column=1)
 
@@ -89,8 +99,8 @@ class MovieRecommendationForm:
         window = tkinter.Tk()
         window.title("Movie Recommendations")
         window.geometry('400x400')
-        window.rowconfigure([0, 1, 2, 3], minsize=100)
-        window.columnconfigure([0, 1, 2, 3], minsize=100)
+        window.rowconfigure([0, 1, 2, 3], minsize=50)
+        window.columnconfigure([0, 1, 2], minsize=100)
         self.__lbl_intro = tkinter.Label(window, text='Movie Recommendation',
                                          font=("Arial Bold", 15)).grid(row=0, column=1)
 
