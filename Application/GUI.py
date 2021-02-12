@@ -89,8 +89,6 @@ class MoviesForm:
         window.geometry('400x400')
         window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=50)
         window.columnconfigure([0, 1, 2], minsize=100)
-        # self.__lbl_intro = tkinter.Label(window, text='Movies',
-        #  font=("Arial Bold", 15)).grid(row=0, column=1)
         movie_data = MoviesData()
         self.__drp_movie = ttk.Combobox(window, values=movie_data.get_movie_names()).grid(row=0, column=1)
         self.__btn_submit = tkinter.Button(window, text="Submit", width=10,
