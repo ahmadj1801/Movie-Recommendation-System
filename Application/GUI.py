@@ -1,4 +1,5 @@
 import tkinter
+import os
 from tkinter import ttk
 from PIL import Image, ImageTk
 
@@ -85,33 +86,46 @@ class StatisticsForm:
 class MoviesForm:
 
     def __init__(self):
-        self.window = tkinter.Tk()
+        self.window = tkinter.Toplevel()
         self.window.title("Movies")
         self.window.geometry('400x400')
         self.window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=50)
         self.window.columnconfigure([0, 1, 2], minsize=100)
         movie_data = MoviesData()
-        self.__drp_movie = ttk.Combobox(self.window, values=movie_data.get_movie_names()).grid(row=0, column=1)
+        self.variable = tkinter.StringVar(self.window)
+        self.variable.set("--Select--")
+        self.variable.trace('w', self.option_callback)
+        self.__drp_movie = ttk.Combobox(self.window, values=movie_data.get_movie_names(),
+                                        textvariable=self.variable).grid(row=0, column=1)
         self.__btn_submit = tkinter.Button(self.window, text="Submit", width=10,
                                            command=self.btn_submit_click).grid(row=0, column=2)
-        self.__image_path = Image.open("../Images/placeholder.png")
-        self.__image_path = self.__image_path.resize((100, 100), Image.ANTIALIAS)
-        self.__image = ImageTk.PhotoImage(self.__image_path)
-        self.__lbl_logo = tkinter.Label(image=self.__image)
-        self.__lbl_logo.image = self.__image
-        self.__lbl_logo.grid(row=1, column=0)
+        self.__image_path = self.__image_path = self.__image = self.__lbl_logo = ''
+        self.display_picture("../Images/placeholder.png")
         # Window Stays Open until closed
         self.window.mainloop()
 
+    def option_callback(self, *args):
+        print(self.variable.get())
+
     def btn_submit_click(self):
         # Get Text from Combo box
+        movie_name = str(self.variable.get())
         # Look for Picture Online - look locally
+        file_path = "../Images/" + movie_name
+        if not os.path.exists(file_path):
+            file_path = "../Images/error.png"
+        self.display_picture(file_path)
         # Look for Ratings
         # Set Name in the Label
         pass
 
-    def populate_combobox(self):
-        pass
+    def display_picture(self, string_path):
+        self.__image_path = Image.open(string_path)
+        self.__image_path = self.__image_path.resize((125, 150), Image.ANTIALIAS)
+        self.__image = ImageTk.PhotoImage(self.__image_path)
+        self.__lbl_logo = tkinter.Label(self.window, image=self.__image)
+        self.__lbl_logo.image = self.__image
+        self.__lbl_logo.grid(row=1, column=0)
 
 
 # ====================================END MoviesForm Class================================================
