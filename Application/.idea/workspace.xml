@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Initial designs of View Movies">
-      <change afterPath="$PROJECT_DIR$/Google.py" afterDir="false" />
+    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Google stuff -Not working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +121,8 @@
       <workItem from="1613119605733" duration="3929000" />
       <workItem from="1613133390467" duration="2221000" />
       <workItem from="1613148917106" duration="5046000" />
-      <workItem from="1613156675842" duration="3288000" />
+      <workItem from="1613156675842" duration="3399000" />
+      <workItem from="1613208758368" duration="3885000" />
     </task>
     <task id="LOCAL-00001" summary="Test Gui form">
       <created>1613047994402</created>
@@ -193,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613154032333</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Google stuff -Not working">
+      <created>1613161030082</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613161030082</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,40 +227,41 @@
     <MESSAGE value="Small changes" />
     <MESSAGE value="Moved stats code form Movies.py" />
     <MESSAGE value="Initial designs of View Movies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial designs of View Movies" />
+    <MESSAGE value="Google stuff -Not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Google stuff -Not working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613047137241">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1613047137241" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1613159745533">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1613212438721">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613159745533" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1613159745533">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613212438721" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1613212438721">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613159745533" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1613159745533">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613212438721" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1613212438721">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613159745533" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1613159745533">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613212438721" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1613212438721">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613159745533" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613212438721" />
     <state x="184" y="28" key="SettingsEditor" timestamp="1613047389761">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613154046658">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613161052530">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613154046658" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613161052530" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1613159745519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1613212438705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Application$Movies.coverage" NAME="Movies Coverage Results" MODIFIED="1613152949555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

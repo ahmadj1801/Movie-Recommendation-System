@@ -84,14 +84,14 @@ class StatisticsForm:
 class MoviesForm:
 
     def __init__(self):
-        window = tkinter.Tk()
-        window.title("Movies")
-        window.geometry('400x400')
-        window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=50)
-        window.columnconfigure([0, 1, 2], minsize=100)
+        self.window = tkinter.Tk()
+        self.window.title("Movies")
+        self.window.geometry('400x400')
+        self.window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=50)
+        self.window.columnconfigure([0, 1, 2], minsize=100)
         movie_data = MoviesData()
-        self.__drp_movie = ttk.Combobox(window, values=movie_data.get_movie_names()).grid(row=0, column=1)
-        self.__btn_submit = tkinter.Button(window, text="Submit", width=10,
+        self.__drp_movie = ttk.Combobox(self.window, values=movie_data.get_movie_names()).grid(row=0, column=1)
+        self.__btn_submit = tkinter.Button(self.window, text="Submit", width=10,
                                            command=self.btn_submit_click).grid(row=0, column=2)
 
     def btn_submit_click(self):
