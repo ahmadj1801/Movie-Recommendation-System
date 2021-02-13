@@ -95,10 +95,13 @@ class MoviesForm:
         self.__btn_submit = tkinter.Button(self.window, text="Submit", width=10,
                                            command=self.btn_submit_click).grid(row=0, column=2)
         self.__image_path = Image.open("../Images/placeholder.png")
+        self.__image_path = self.__image_path.resize((100, 100), Image.ANTIALIAS)
         self.__image = ImageTk.PhotoImage(self.__image_path)
-        self.__lbl_logo = tkinter.Label(master=self.window, text="Hello")
+        self.__lbl_logo = tkinter.Label(image=self.__image)
         self.__lbl_logo.image = self.__image
         self.__lbl_logo.grid(row=1, column=0)
+        # Window Stays Open until closed
+        self.window.mainloop()
 
     def btn_submit_click(self):
         # Get Text from Combo box
