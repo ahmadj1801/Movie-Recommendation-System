@@ -86,21 +86,52 @@ class StatisticsForm:
 class MoviesForm:
 
     def __init__(self):
+        # Main Window
         self.window = tkinter.Toplevel()
         self.window.title("Movies")
-        self.window.geometry('400x400')
-        self.window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=50)
-        self.window.columnconfigure([0, 1, 2], minsize=100)
+        self.window.geometry('700x400')
+        self.window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=20)
+        self.window.columnconfigure([0, 1, 2], minsize=200)
+        # Movie Data Frames
         movie_data = MoviesData()
+        # Set Up Drop Down Component
         self.variable = tkinter.StringVar(self.window)
         self.variable.set("--Select--")
         self.variable.trace('w', self.option_callback)
         self.__drp_movie = ttk.Combobox(self.window, values=movie_data.get_movie_names(),
                                         textvariable=self.variable).grid(row=0, column=1)
+        # Set Up Button
         self.__btn_submit = tkinter.Button(self.window, text="Submit", width=10,
                                            command=self.btn_submit_click).grid(row=0, column=2)
+        # Set Up Movie Logo
         self.__image_path = self.__image_path = self.__image = self.__lbl_logo = ''
         self.display_logo_picture("../Images/placeholder.png")
+        # Set Up Review label
+        self.__lbl_review = tkinter.Label(self.window, text="Reviews", font=("Arial Bold", 10)
+                                          ).grid(row=3, column=0)
+        # Set up star Images
+        self.__lbl_5stars = ''
+        self.display_stars("../Images/5stars.png", self.__lbl_5stars, 4, 0)
+        self.__lbl_4stars = ''
+        self.display_stars("../Images/4stars.png", self.__lbl_4stars, 5, 0)
+        self.__lbl_3stars = ''
+        self.display_stars("../Images/3stars.png", self.__lbl_3stars, 6, 0)
+        self.__lbl_2stars = ''
+        self.display_stars("../Images/2stars.png", self.__lbl_2stars, 7, 0)
+        self.__lbl_1stars = ''
+        self.display_stars("../Images/1stars.png", self.__lbl_1stars, 8, 0)
+        # Name Label
+        self.text = tkinter.StringVar()
+        self.text.set("")
+        self.__lbl_name = tkinter.Label(self.window, textvariable=self.text,
+                                        font=("Arial Bold", 15)).grid(row=1, column=1)
+        # Rating Label
+        self.__rating = tkinter.Label(self.window, text="Average Rating", font=("Arial Bold", 10)).grid(row=4, column=2)
+        # Star Image
+        # Rating Value
+        self.__avg_rating = tkinter.StringVar()
+        self.__avg_rating.set("None")
+        self.__lbl_avg_rating = tkinter.Label(self.window, textvariable=self.__avg_rating).grid(row=6, column=2)
         # Window Stays Open until closed
         self.window.mainloop()
 
@@ -117,15 +148,24 @@ class MoviesForm:
         self.display_logo_picture(file_path)
         # Look for Ratings
         # Set Name in the Label
-        pass
+        self.text.set(movie_name)
 
     def display_logo_picture(self, string_path):
         self.__image_path = Image.open(string_path)
-        self.__image_path = self.__image_path.resize((125, 150), Image.ANTIALIAS)
+        self.__image_path = self.__image_path.resize((125, 150), Image.NONE)
         self.__image = ImageTk.PhotoImage(self.__image_path)
         self.__lbl_logo = tkinter.Label(self.window, image=self.__image)
         self.__lbl_logo.image = self.__image
         self.__lbl_logo.grid(row=1, column=0)
+
+    def display_stars(self, string_path, label, r, c):
+        path = Image.open(string_path)
+        path = path.resize((100, 20), Image.NORMAL)
+        img = ImageTk.PhotoImage(path)
+        label = tkinter.Label(self.window, image=img)
+        label.image = img
+        label.grid(row=r, column=c)
+        pass
 
 
 # ====================================END MoviesForm Class================================================
