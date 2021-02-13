@@ -100,7 +100,7 @@ class MoviesForm:
         self.__btn_submit = tkinter.Button(self.window, text="Submit", width=10,
                                            command=self.btn_submit_click).grid(row=0, column=2)
         self.__image_path = self.__image_path = self.__image = self.__lbl_logo = ''
-        self.display_picture("../Images/placeholder.png")
+        self.display_logo_picture("../Images/placeholder.png")
         # Window Stays Open until closed
         self.window.mainloop()
 
@@ -114,12 +114,12 @@ class MoviesForm:
         file_path = "../Images/" + movie_name
         if not os.path.exists(file_path):
             file_path = "../Images/error.png"
-        self.display_picture(file_path)
+        self.display_logo_picture(file_path)
         # Look for Ratings
         # Set Name in the Label
         pass
 
-    def display_picture(self, string_path):
+    def display_logo_picture(self, string_path):
         self.__image_path = Image.open(string_path)
         self.__image_path = self.__image_path.resize((125, 150), Image.ANTIALIAS)
         self.__image = ImageTk.PhotoImage(self.__image_path)
