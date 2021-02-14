@@ -215,11 +215,10 @@ class MoviesForm:
 
     def display_ratings(self, ratings):
         self.__star5.set("(" + str(ratings[4]) + ")")
-        self.__star4.set("(" + str(ratings[3])+ ")")
+        self.__star4.set("(" + str(ratings[3]) + ")")
         self.__star3.set("(" + str(ratings[2]) + ")")
         self.__star2.set("(" + str(ratings[1]) + ")")
         self.__star1.set("(" + str(ratings[0]) + ")")
-
 
 
 # ====================================END MoviesForm Class================================================
