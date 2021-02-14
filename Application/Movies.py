@@ -4,9 +4,8 @@ import re
 
 class MoviesData:
 
-    movies = ratings = " "
-
     def __init__(self):
+        self.movies = self.ratings = ''
         self.read_data()
 
     # Read CSV Files
@@ -18,3 +17,9 @@ class MoviesData:
         movie_names = list(self.movies['title'])
         movie_names.sort()
         return movie_names
+
+    def get_movie_data_frame(self):
+        return self.movies
+
+    def get_ratings_data_frame(self):
+        return self.ratings
