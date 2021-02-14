@@ -153,9 +153,9 @@ class MoviesForm:
             file_path = "../Images/error.png"
         self.display_logo_picture(file_path)
         # Look for Ratings
-        avg_rating = self.get_average_rating(movie_name)
+        avg_rating = self.movie_data.get_average_rating(movie_name)
         # Total number of ratings
-        total_reviews = self.get_total_number_of_reviews(movie_name)
+        total_reviews = self.movie_data.get_total_number_of_reviews(movie_name)
         self.__avg_rating.set(str(avg_rating) + " ( " + str(total_reviews) + " )")
         # Update Stars
         print(self.load_stars(avg_rating))
@@ -184,27 +184,6 @@ class MoviesForm:
         label = tkinter.Label(self.window, image=img)
         label.image = img
         label.grid(row=r, column=c)
-
-    def get_average_rating(self, movie_name):
-        movie_df = self.movie_data.get_movie_data_frame()
-        rating_df = self.movie_data.get_ratings_data_frame()
-        df = movie_df[movie_df.title == movie_name]
-        print(df)
-        average_ratings: pd.DataFrame = pd.merge(df, rating_df, left_on='movieId', right_on='movieId',
-                                                 how='left').drop(['userId', 'timestamp'], axis=1).groupby(
-            'movieId').mean()
-        print(average_ratings)
-        return round((average_ratings['rating'].tolist())[0], 2)
-
-    def get_total_number_of_reviews(self, movie_name):
-        movie_df = self.movie_data.get_movie_data_frame()
-        rating_df = self.movie_data.get_ratings_data_frame()
-        df = movie_df[movie_df.title == movie_name]
-        df: pd.DataFrame = pd.merge(df, rating_df, left_on='movieId', right_on='movieId',
-                                    how='left').drop(['userId', 'timestamp'], axis=1)
-        total_count = df.shape[0]
-        return total_count
-
 
 # ====================================END MoviesForm Class================================================
 
