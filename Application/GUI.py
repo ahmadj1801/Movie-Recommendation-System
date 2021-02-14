@@ -138,6 +138,32 @@ class MoviesForm:
         self.__avg_rating.set("None")
         self.__lbl_avg_rating = tkinter.Label(self.window, textvariable=self.__avg_rating, font=("Arial Bold", 8)).grid(
             row=6, column=1)
+        # Individual star ratings
+        self.__star5 = tkinter.StringVar()
+        self.__star5.set("(0)")
+        self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star5, font=("Arial Bold", 8)).grid(
+            row=4, column=0, sticky=tkinter.E, padx=30)
+
+        self.__star4 = tkinter.StringVar()
+        self.__star4.set("(0)")
+        self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star4, font=("Arial Bold", 8)).grid(
+            row=5, column=0, sticky=tkinter.E, padx=30)
+
+        self.__star3 = tkinter.StringVar()
+        self.__star3.set("(0)")
+        self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star3, font=("Arial Bold", 8)).grid(
+            row=6, column=0, sticky=tkinter.E, padx=30)
+
+        self.__star2 = tkinter.StringVar()
+        self.__star2.set("(0)")
+        self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star2, font=("Arial Bold", 8)).grid(
+            row=7, column=0, sticky=tkinter.E, padx=30)
+
+        self.__star1 = tkinter.StringVar()
+        self.__star1.set("(0)")
+        self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star1, font=("Arial Bold", 8)).grid(
+            row=8, column=0, sticky=tkinter.E, padx=30)
+
         # Window Stays Open until closed
         self.window.mainloop()
 
@@ -162,6 +188,8 @@ class MoviesForm:
         self.display_stars(self.load_stars(avg_rating), self.__lbl_avg_rating, 5, 1)
         # Set Name in the Label
         self.text.set(self.movie_data.format_name(movie_name))
+        ratings = self.movie_data.get_number_of_x_ratings(movie_name, [0, 1, 2, 3, 4, 5])
+        self.display_ratings(ratings)
 
     def load_stars(self, rating):
         path = '../Images/'
@@ -184,6 +212,15 @@ class MoviesForm:
         label = tkinter.Label(self.window, image=img)
         label.image = img
         label.grid(row=r, column=c)
+
+    def display_ratings(self, ratings):
+        self.__star5.set("(" + str(ratings[4]) + ")")
+        self.__star4.set("(" + str(ratings[3])+ ")")
+        self.__star3.set("(" + str(ratings[2]) + ")")
+        self.__star2.set("(" + str(ratings[1]) + ")")
+        self.__star1.set("(" + str(ratings[0]) + ")")
+
+
 
 # ====================================END MoviesForm Class================================================
 

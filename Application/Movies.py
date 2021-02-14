@@ -24,8 +24,12 @@ class MoviesData:
     def get_ratings_data_frame(self):
         return self.ratings
 
-    def get_average_rating(self, movie_name):
+    def get_filtered_df(self, movie_name):
         df = self.movies[self.movies.title == movie_name]
+        return df
+
+    def get_average_rating(self, movie_name):
+        df = self.get_filtered_df(movie_name)
         print(df)
         average_ratings: pd.DataFrame = pd.merge(df, self.ratings, left_on='movieId', right_on='movieId',
                                                  how='left').drop(['userId', 'timestamp'], axis=1).groupby(
@@ -34,13 +38,26 @@ class MoviesData:
         return round((average_ratings['rating'].tolist())[0], 2)
 
     def get_total_number_of_reviews(self, movie_name):
-        df = self.movies[self.movies.title == movie_name]
+        df = self.get_filtered_df(movie_name)
         df: pd.DataFrame = pd.merge(df, self.ratings, left_on='movieId', right_on='movieId',
                                     how='left').drop(['userId', 'timestamp'], axis=1)
         total_count = df.shape[0]
         return total_count
 
-    def format_name(self, movie_name):
+    def get_number_of_x_ratings(self, movie_name, star_levels):
+        df = self.get_filtered_df(movie_name)
+        df: pd.DataFrame = pd.merge(df, self.ratings, left_on='movieId', right_on='movieId',
+                                    how='left').drop(['userId', 'timestamp'], axis=1)
+        print(df)
+        df = df.groupby(pd.cut(df.rating, star_levels)).count()
+        #total_count = df.shape[0]
+        print(df)
+        df = df['rating'].tolist()
+        print(df)
+        return df
+
+    @staticmethod
+    def format_name(movie_name):
         c = 1
         movie = str(movie_name).split(" ")
         new_name = ''
