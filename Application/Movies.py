@@ -39,3 +39,14 @@ class MoviesData:
                                     how='left').drop(['userId', 'timestamp'], axis=1)
         total_count = df.shape[0]
         return total_count
+
+    def format_name(self, movie_name):
+        c = 1
+        movie = str(movie_name).split(" ")
+        new_name = ''
+        for m in movie:
+            new_name = "{0} {1}".format(new_name, str(m))
+            if c % 3 == 0:
+                new_name = new_name + "\n"
+            c = c + 1
+        return new_name

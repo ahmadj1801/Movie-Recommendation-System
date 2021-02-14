@@ -161,7 +161,7 @@ class MoviesForm:
         print(self.load_stars(avg_rating))
         self.display_stars(self.load_stars(avg_rating), self.__lbl_avg_rating, 5, 1)
         # Set Name in the Label
-        self.text.set(movie_name)
+        self.text.set(self.movie_data.format_name(movie_name))
 
     def load_stars(self, rating):
         path = '../Images/'
