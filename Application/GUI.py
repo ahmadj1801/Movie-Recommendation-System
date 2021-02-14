@@ -227,12 +227,45 @@ class MoviesForm:
 class MovieRecommendationForm:
 
     def __init__(self):
-        window = tkinter.Tk()
-        window.title("Movie Recommendations")
-        window.geometry('400x400')
-        window.rowconfigure([0, 1, 2, 3], minsize=50)
-        window.columnconfigure([0, 1, 2], minsize=100)
-        self.__lbl_intro = tkinter.Label(window, text='Movie Recommendation',
-                                         font=("Arial Bold", 15)).grid(row=0, column=1)
+        self.window = tkinter.Toplevel()
+        self.window.title("Movie Recommendations")
+        self.window.geometry('650x400')
+        # Movie Data Frames
+        self.movie_data = MoviesData()
+        self.__lbl_intro = tkinter.Label(self.window, text='Movie Recommendation',
+                                         font=("Arial Bold", 15)).place(x=240, y=20)
+        self.__lbl_drp = tkinter.Label(self.window, text="Select a Movie:").place(x=10, y=70)
+        self.__lbl_sld = tkinter.Label(self.window, text="Enter a Rating:").place(x=10, y=130)
+        self.__btn_submit = tkinter.Button(self.window, text="Confirm Rating",
+                                           command=self.btn_submit_click).place(x=145, y=180)
+        # Set Up Drop Down Component
+        self.variable = tkinter.StringVar(self.window)
+        self.variable.set("--Select--")
+        self.variable.trace('w', self.option_callback)
+        self.__drp_movie = ttk.Combobox(self.window, values=self.movie_data.get_movie_names(),
+                                        textvariable=self.variable).place(x=120, y=70)
+        # Set Up Slider
+        self.var = tkinter.DoubleVar()
+        self.__slider = tkinter.Scale(self.window, from_=1, to=5, orient=tkinter.HORIZONTAL,
+                                      tickinterval=1, length=140, variable=self.var).place(x=120, y=110)
+        # Set up List Box
+        self.__lst_watched = tkinter.Listbox(self.window, width=50)
+        # self.__lst_watched.insert(1, "Hello")
+        self.__lst_watched.place(x=300, y=70)
+        self.watched = dict()
+
+    def btn_submit_click(self):
+        movie_name = self.variable.get()
+        rating = self.var.get()
+        self.watched[movie_name] = rating
+        full_string = movie_name + " " + str(rating)
+        print(self.watched)
+        print(full_string)
+        # Add to List
+        self.__lst_watched.insert(tkinter.END, full_string)
+        pass
+
+    def option_callback(self, *args):
+        print(self.variable.get())
 
 # ====================================END MovieRecommendationForm Class================================================
