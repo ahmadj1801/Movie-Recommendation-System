@@ -1,7 +1,7 @@
 import tkinter
 import os
 import pandas as pd
-from tkinter import ttk
+from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
 import numpy as np
 
@@ -189,7 +189,7 @@ class MoviesForm:
         self.display_stars(self.load_stars(avg_rating), self.__lbl_avg_rating, 5, 1)
         # Set Name in the Label
         self.text.set(self.movie_data.format_name(movie_name))
-        ratings = self.movie_data.get_number_of_x_ratings(movie_name, [0, 1, 2, 3, 4, 5])
+        ratings = self.movie_data.get_number_of_x_ratings(movie_name, [0, 1.9, 2.9, 3.9, 4.9, 5])
         self.display_ratings(ratings)
 
     def load_stars(self, rating):
@@ -275,10 +275,13 @@ class MovieRecommendationForm:
         pass
 
     def btn_recommend_click(self):
-        ml = Recommended(self.watched)
-        # recommend method on ml -> return array
-        # update recommend list box
-        pass
+        if self.__lst_watched.size() != 0:
+            ml = Recommended(self.watched)
+            # recommend method on ml -> return array
+            ml.get_recommendations()
+            # update recommend list box
+        else:
+            messagebox.showerror('Error', "Please Rate At Least ONE Movie!")
 
     def option_callback(self, *args):
         print(self.variable.get())
