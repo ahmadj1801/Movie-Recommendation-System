@@ -50,7 +50,6 @@ class MoviesData:
                                     how='left').drop(['userId', 'timestamp'], axis=1)
         print(df)
         df = df.groupby(pd.cut(df.rating, star_levels)).count()
-        #total_count = df.shape[0]
         print(df)
         df = df['rating'].tolist()
         print(df)
