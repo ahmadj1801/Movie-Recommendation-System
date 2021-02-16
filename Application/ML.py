@@ -29,16 +29,15 @@ class Recommended:
         movie_rating = movie_rating.fillna(0)
         # Similarity Values
         user_similarity = movie_rating.corr(method='pearson')
-        print(user_similarity.head())
         col = user_similarity.columns
         for movie in self.__user_watched:  #
             if movie in col:
                 self.sim = self.sim.append(self.get_recommended_movies(user_similarity, movie,
                                                                        self.__user_watched.get(movie)),
                                            ignore_index=True)
-        # print(self.sim.head())
+        print(self.sim.head())
         sorted_recommendations = self.sim.sum().sort_values(ascending=False)
-        print(sorted_recommendations[0])
+        # print(sorted_recommendations.T)
         # final_recommendations = [i for i in sorted_recommendations if i not in self.__user_watched]
         # print(final_recommendations)
         return 'final_recommendations[0:11]'
