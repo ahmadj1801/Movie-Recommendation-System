@@ -278,8 +278,9 @@ class MovieRecommendationForm:
         if self.__lst_watched.size() != 0:
             ml = Recommended(self.watched)
             # recommend method on ml -> return array
-            ml.get_recommendations()
+            suggestions = ml.get_recommendations
             # update recommend list box
+            print(suggestions)
         else:
             messagebox.showerror('Error', "Please Rate At Least ONE Movie!")
 

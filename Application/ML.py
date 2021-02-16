@@ -16,6 +16,7 @@ class Recommended:
         self.sim: pd.DataFrame = pd.DataFrame()
         pass
 
+    @property
     def get_recommendations(self):
         movie_rating: pd.DataFrame = pd.merge(self.movie_data.get_movie_data_frame(),
                                               self.movie_data.get_ratings_data_frame()).drop(['timestamp'], axis=1)
@@ -28,18 +29,19 @@ class Recommended:
         movie_rating = movie_rating.fillna(0)
         # Similarity Values
         user_similarity = movie_rating.corr(method='pearson')
-        # Debugging Print
-        # print(movie_rating.head())  # .columns
         print(user_similarity.head())
         col = user_similarity.columns
-        temp = {'Avengers, The (2012)': 5.0, 'Avengers: Age of Ultron (2015)': 4.0, 'Babe, The (1992)': 2.0, 'Bad Teacher (2011)': 3.0, 'Bangkok Dangerous (2008)': 5.0, 'Dirty Love (2005)': 2.0, 'Divorce American Style (1967)': 1.0}
-        for movie in temp:  #self.__user_watched
+        for movie in self.__user_watched:  #
             if movie in col:
                 self.sim = self.sim.append(self.get_recommended_movies(user_similarity, movie,
-                                                                       temp.get(movie)),
+                                                                       self.__user_watched.get(movie)),
                                            ignore_index=True)
-        print(self.sim.head())
-        print(self.sim.sum().sort_values(ascending=False))
+        # print(self.sim.head())
+        sorted_recommendations = self.sim.sum().sort_values(ascending=False)
+        print(sorted_recommendations[0])
+        # final_recommendations = [i for i in sorted_recommendations if i not in self.__user_watched]
+        # print(final_recommendations)
+        return 'final_recommendations[0:11]'
 
     def get_recommended_movies(self, sim_df, movie_name, user_rating):
         score = sim_df[movie_name] * (float(user_rating) - 2.5)
