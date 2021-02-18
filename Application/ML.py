@@ -1,8 +1,5 @@
 from tkinter import messagebox
-
 import pandas as pd
-import sklearn
-
 from Movies import MoviesData
 
 
@@ -39,13 +36,19 @@ class Recommended:
                                            ignore_index=True)
         print(self.sim.head())
         sorted_recommendations = self.sim.sum().sort_values(ascending=False)
+        names = []
         if len(sorted_recommendations) == 0:
-            messagebox.showinfo('Insufficient Ratings', 'There are insufficient ratings to recommend you a movie')
-        print(sorted_recommendations.index)
-        names = sorted_recommendations.index
-        final_recommendations = [i for i in names if i not in self.__user_watched]
-        print(final_recommendations)
-        return final_recommendations[0:10]
+            messagebox.showinfo('Insufficient Ratings', 'The movie(s) that you have provided\n'
+                                                        'have insufficient ratings to produce\n'
+                                                        'meaningful results. Please try rating\n'
+                                                        'more movies.')
+            return names
+        else:
+            print(sorted_recommendations.index)
+            names = sorted_recommendations.index
+            final_recommendations = [i for i in names if i not in self.__user_watched]
+            print(final_recommendations)
+            return final_recommendations[0:10]
 
     def get_recommended_movies(self, sim_df, movie_name, user_rating):
         score = sim_df[movie_name] * (float(user_rating) - 2.5)
