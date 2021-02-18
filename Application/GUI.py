@@ -278,13 +278,18 @@ class MovieRecommendationForm:
         if self.__lst_watched.size() != 0:
             ml = Recommended(self.watched)
             # recommend method on ml -> return array
-            suggestions = ml.get_recommendations
+            suggestions: [] = ml.get_recommendations
             # update recommend list box
-            print(suggestions)
+            self.update_recommendations(suggestions)
         else:
             messagebox.showerror('Error', "Please Rate At Least ONE Movie!")
 
     def option_callback(self, *args):
         print(self.variable.get())
+
+    def update_recommendations(self, suggestions):
+        self.__lst_recommended.delete(0, tkinter.END)
+        for suggestion in suggestions:
+            self.__lst_recommended.insert(tkinter.END, suggestion)
 
 # ====================================END MovieRecommendationForm Class================================================
