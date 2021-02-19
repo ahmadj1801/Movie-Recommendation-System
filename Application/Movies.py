@@ -1,6 +1,8 @@
 import pandas as pd
-import matplotlib
+import matplotlib as pt
 import re
+
+from matplotlib.pyplot import plot
 
 
 class MoviesData:
@@ -71,6 +73,11 @@ class MoviesData:
     # ==================================== Data Analytics =====================================
 
     def top_five_movies(self):
+        top_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
+        top_5 = top_5['title'].value_counts(ascending=False)
+        print(top_5)
+        top_5 = top_5.head(5)
+        # plot('Movie Name', 'Number of Reviews', data=top_5)
         pass  # Display movie names and the rating (Store)
 
     def bottom_five_movies(self):

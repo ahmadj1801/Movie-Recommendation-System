@@ -1,7 +1,9 @@
 import pandas as pd
 import re
 
+from Movies import MoviesData
 
+'''
 movies = ratings = None
 movie_names = genres = average_ratings = None
 
@@ -22,4 +24,6 @@ def clean_titles(titles):
     for t in titles:
         new_title = re.sub('\([0-9]{4}\)', '', t)
         new_movie_names.append(new_title.strip())
-    return new_movie_names
+    return new_movie_names'''
+m = MoviesData()
+m.top_five_movies()
