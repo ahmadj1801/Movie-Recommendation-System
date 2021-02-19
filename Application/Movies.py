@@ -1,8 +1,7 @@
 import pandas as pd
-import matplotlib as pt
+import matplotlib.pyplot as plt
 import re
 
-from matplotlib.pyplot import plot
 
 
 class MoviesData:
@@ -75,12 +74,22 @@ class MoviesData:
     def top_five_movies(self):
         top_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
         top_5 = top_5['title'].value_counts(ascending=False)
-        print(top_5)
         top_5 = top_5.head(5)
-        # plot('Movie Name', 'Number of Reviews', data=top_5)
+        movie_names = top_5.index
+        graph = plt.figure(figsize=(20, 10))
+        plt.bar(movie_names, top_5, color=['blue', 'red'], width=0.5)
+        plt.xlabel('Title')
+        plt.ylabel('Number of Ratings')
+        plt.title('Most Reviewed Movies')
+        plt.show()
         pass  # Display movie names and the rating (Store)
 
     def bottom_five_movies(self):
+        bottom_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
+        bottom_5 = bottom_5['title'].value_counts(ascending=True)
+        bottom_5 = bottom_5.head(5)
+        movie_names = bottom_5.index
+        print(bottom_5)
         pass  # Display movie names and the rating (Store)
 
     def movie_analytics(self):

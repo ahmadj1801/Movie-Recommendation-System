@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Added Class for Machine Learning&#10;Deleted Google scraping file&#10;Completed GUI for Recommendation system&#10;Removed imports from Application.py">
+    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Code for top five movies : Need to Graph Result">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +175,7 @@
       <workItem from="1613492213094" duration="8185000" />
       <workItem from="1613664699667" duration="4465000" />
       <workItem from="1613677983651" duration="2393000" />
-      <workItem from="1613736429138" duration="5692000" />
+      <workItem from="1613736429138" duration="6942000" />
     </task>
     <task id="LOCAL-00001" summary="Test Gui form">
       <created>1613047994402</created>
@@ -409,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613747928874</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Code for top five movies : Need to Graph Result">
+      <created>1613753239802</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1613753239802</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +435,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial classes for form handling" />
     <MESSAGE value="Gui Script containing classes for each form&#10;Main Class" />
     <MESSAGE value="Small changes" />
     <MESSAGE value="Moved stats code form Movies.py" />
@@ -454,7 +459,8 @@
     <MESSAGE value="Recommendations are displayed to the user." />
     <MESSAGE value="Added few touch ups to ml" />
     <MESSAGE value="Ideas for Data Analytics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ideas for Data Analytics" />
+    <MESSAGE value="Code for top five movies : Need to Graph Result" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code for top five movies : Need to Graph Result" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="62" key="#Inspections" timestamp="1613306556809">
@@ -505,25 +511,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613748172052">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613753285760">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613748172052" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613753285760" />
     <state x="526" y="156" key="refactoring.ChangeSignatureDialog" timestamp="1613330413107">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="526" y="156" key="refactoring.ChangeSignatureDialog/0.0.1366.768@0.0.1366.768" timestamp="1613330413107" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Application$Statistics.coverage" NAME="Statistics Coverage Results" MODIFIED="1613752719018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
