@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib
 import re
 
 
@@ -66,3 +67,17 @@ class MoviesData:
                 new_name = new_name + "\n"
             c = c + 1
         return new_name
+
+    # ==================================== Data Analytics =====================================
+
+    def top_five_movies(self):
+        pass  # Display movie names and the rating (Store)
+
+    def bottom_five_movies(self):
+        pass  # Display movie names and the rating (Store)
+
+    def movie_analytics(self):
+        pass  # Movie name -> pie charge of ratings in each category (Create)
+
+    def movies_per_star_rating(self):
+        pass  # For each star rating, how many movies in each category (Create)
