@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import re
 
 
-
 class MoviesData:
 
     def __init__(self):
@@ -102,3 +101,15 @@ class MoviesData:
 
     def movies_per_star_rating(self):
         pass  # For each star rating, how many movies in each category (Create)
+
+    def highest_rated_movies(self):
+        highest = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId').drop(['userId',
+                                                                                                   'timestamp', 'genres'
+                                                                                                      , 'movieId'],
+                                                                                                  axis=1)
+        highest = (highest.groupby('title').mean('rating')).sort_values('rating', ascending=False)
+        print(highest)
+        pass
+
+    def lowest_rated_movies(self):
+        pass
