@@ -77,7 +77,7 @@ class MoviesData:
         top_5 = top_5.head(5)
         movie_names = top_5.index
         graph = plt.figure(figsize=(20, 10))
-        plt.bar(movie_names, top_5, color=['blue', 'red'], width=0.5)
+        plt.bar(movie_names, top_5, color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
         plt.xlabel('Title')
         plt.ylabel('Number of Ratings')
         plt.title('Most Reviewed Movies')
@@ -89,7 +89,12 @@ class MoviesData:
         bottom_5 = bottom_5['title'].value_counts(ascending=True)
         bottom_5 = bottom_5.head(5)
         movie_names = bottom_5.index
-        print(bottom_5)
+        graph = plt.figure(figsize=(20, 10))
+        plt.bar(movie_names, bottom_5, color=['royalblue', 'violet', 'orchid'], width=0.5)
+        plt.xlabel('Title')
+        plt.ylabel('Number of Ratings')
+        plt.title('Least Reviewed Movies')
+        plt.show()
         pass  # Display movie names and the rating (Store)
 
     def movie_analytics(self):
