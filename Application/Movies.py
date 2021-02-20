@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 import re
 
 
@@ -100,6 +101,20 @@ class MoviesData:
         pass  # Movie name -> pie charge of ratings in each category (Create)
 
     def movies_per_star_rating(self):
+        star = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId',
+                                                 how='left').drop(['userId', 'timestamp'], axis=1).groupby(
+            'movieId').mean()
+        star = star.groupby(pd.cut(star.rating, [0, 1, 2, 3, 4, 5])).count()
+        print(star.values)
+        pie = plt.figure()
+        axis = pie.add_axes([0, 0, 1, 1])
+        axis.axis('equal')
+        headings = ['0 - 1 Star', '1  - 2 Star', '2 - 3 Star', '3 - 4 Star', '4 - 5 Star']
+        print(star)
+        ratings = [x[0] for x in star.values]
+        print(ratings)
+        axis.pie(ratings, labels=headings, autopct='%1.2f%%')
+        plt.show()
         pass  # For each star rating, how many movies in each category (Create)
 
     def highest_rated_movies(self):
