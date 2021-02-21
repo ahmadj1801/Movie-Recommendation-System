@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 import os
+import re
 
 
 class MoviesData:
@@ -69,6 +71,17 @@ class MoviesData:
             c = c + 1
         return new_name
 
+    def get_year(self, movie_name):
+        year = 0
+        year = re.findall('\([0-9]{4}\)', movie_name)
+        if year != []:
+            year = year[0]
+            year = re.sub('\(', '', year)
+            year = re.sub('\)', '', year)
+        else:
+            year = 0
+        return int(year)
+
     # ==================================== Data Analytics =====================================
 
     def most_reviewed_movies(self):
@@ -127,7 +140,8 @@ class MoviesData:
         path = '../highest_rated_movies.png'
         if not os.path.exists(path):
             highest = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId').drop(['userId',
-                                                                                                       'timestamp', 'genres'
+                                                                                                       'timestamp',
+                                                                                                       'genres'
                                                                                                           , 'movieId'],
                                                                                                       axis=1)
             highest = (highest.groupby('title').mean('rating')).sort_values('rating', ascending=False)
@@ -152,3 +166,29 @@ class MoviesData:
             plt.show()
             #  plt.savefig(path)
         return path
+
+    def movies_per_year(self):
+        titles = self.movies['title']
+        per_year = dict()
+        release_years = []
+        frequencies = []
+        c = 0
+        for title in titles:
+            year = str(self.get_year(title))
+            if year not in per_year.keys():
+                per_year[year] = 1
+            else:
+                per_year[year] = per_year.get(year) + 1
+        for i in sorted(per_year):
+            release_years.append(i)
+            frequencies.append(int(per_year[i]))
+        #  print(len(release_years))
+        #  print(len(frequencies))
+        #  print(per_year)
+        plt.figure(figsize=(20, 10))
+        plt.plot(release_years, frequencies)
+        plt.title('Number of Movie Releases Per Year')
+        plt.xlabel('Year')
+        plt.ylabel('Number of Movie Releases')
+        plt.xticks(release_years[::10])
+        plt.show()
