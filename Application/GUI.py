@@ -41,7 +41,7 @@ class HomeForm:
         self.__btn_movies = tkinter.Button(window, text="View Movies", width=20,
                                            command=self.btn_movies_click).grid(row=1, column=1)
         # Click to View Data Analytics
-        self.__btn_stats = tkinter.Button(window, text="View Data Analytics", width=20,
+        self.__btn_stats = tkinter.Button(window, text="Data Visualisation", width=20,
                                           command=self.btn_stats_click).grid(row=2, column=1)
         # Click to perform Machine Learning
         self.__btn_recommendation = tkinter.Button(window, text="Movie Recommendations", width=20,

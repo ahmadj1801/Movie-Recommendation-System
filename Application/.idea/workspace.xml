@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Modified Colours&#10;Graphs for Least and Most Reviewed Movies Done">
+      <change afterPath="$PROJECT_DIR$/../Images/least_reviewed_movies.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Images/most_reviewed__movies.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Images/movies_per_star.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics.py" afterDir="false" />
@@ -178,7 +181,8 @@
       <workItem from="1613677983651" duration="2393000" />
       <workItem from="1613736429138" duration="9351000" />
       <workItem from="1613760150137" duration="2183000" />
-      <workItem from="1613850431514" duration="5126000" />
+      <workItem from="1613850431514" duration="5426000" />
+      <workItem from="1613906852448" duration="5167000" />
     </task>
     <task id="LOCAL-00001" summary="Test Gui form">
       <created>1613047994402</created>
@@ -439,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613762379794</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Pie chart added - Counts for each star rating">
+      <created>1613856863788</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1613856863788</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +470,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial designs of View Movies" />
     <MESSAGE value="Google stuff -Not working" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="Images not showing" />
@@ -484,7 +494,8 @@
     <MESSAGE value="Graph for Top Movies" />
     <MESSAGE value="Modified Colours&#10;Graphs for Least and Most Reviewed Movies Done" />
     <MESSAGE value="Highest rated movie df" />
-    <option name="LAST_COMMIT_MESSAGE" value="Highest rated movie df" />
+    <MESSAGE value="Pie chart added - Counts for each star rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pie chart added - Counts for each star rating" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="62" key="#Inspections" timestamp="1613306556809">
@@ -499,46 +510,46 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1364" height="440" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1613668049771" />
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
-    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
+    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
-    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
+    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
-    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
+    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
-    <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
+    <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
-    <state width="1323" height="238" key="GridCell.Tab.1.center" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
+    <state width="1323" height="238" key="GridCell.Tab.1.center" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
-    <state width="1323" height="238" key="GridCell.Tab.1.left" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
+    <state width="1323" height="238" key="GridCell.Tab.1.left" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
-    <state width="1323" height="238" key="GridCell.Tab.1.right" timestamp="1613854429912">
+    <state width="1323" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
+    <state width="1323" height="238" key="GridCell.Tab.1.right" timestamp="1613856997943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1613854429912" />
+    <state width="1323" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1613856997943" />
     <state x="184" y="28" key="SettingsEditor" timestamp="1613047389761">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613762391135">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613856906950">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613762391135" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613856906950" />
     <state x="526" y="156" key="refactoring.ChangeSignatureDialog" timestamp="1613330413107">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -549,12 +560,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>124</line>
+          <line>132</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>107</line>
+          <line>113</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

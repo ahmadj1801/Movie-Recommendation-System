@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
-import re
+import os
 
 
 class MoviesData:
@@ -14,6 +13,7 @@ class MoviesData:
     def read_data(self):
         self.ratings = pd.read_csv("../Data/ratings.csv")
         self.movies = pd.read_csv("../Data/movies.csv")
+        plt.rcParams['font.size'] = 15
 
     def get_movie_names(self):
         movie_names = list(self.movies['title'])
@@ -71,60 +71,84 @@ class MoviesData:
 
     # ==================================== Data Analytics =====================================
 
-    def top_five_movies(self):
-        top_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
-        top_5 = top_5['title'].value_counts(ascending=False)
-        top_5 = top_5.head(5)
-        movie_names = top_5.index
-        graph = plt.figure(figsize=(20, 10))
-        plt.bar(movie_names, top_5, color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
-        plt.xlabel('Title')
-        plt.ylabel('Number of Ratings')
-        plt.title('Most Reviewed Movies')
-        plt.show()
-        pass  # Display movie names and the rating (Store)
+    def most_reviewed_movies(self):
+        path = '../Images/most_reviewed__movies.png'
+        if not os.path.exists(path):
+            top_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
+            top_5 = top_5['title'].value_counts(ascending=False)
+            top_5 = top_5.head(5)
+            movie_names = top_5.index
+            graph = plt.figure(figsize=(20, 10))
+            plt.bar(movie_names, top_5, color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
+            plt.xlabel('Title')
+            plt.ylabel('Number of Ratings')
+            plt.title('Most Reviewed Movies')
+            plt.show()  # plt.savefig(path)
+        return path  # Display movie names and the rating (Store)
 
-    def bottom_five_movies(self):
-        bottom_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
-        bottom_5 = bottom_5['title'].value_counts(ascending=True)
-        bottom_5 = bottom_5.head(5)
-        movie_names = bottom_5.index
-        graph = plt.figure(figsize=(20, 10))
-        plt.bar(movie_names, bottom_5, color=['royalblue', 'violet', 'orchid'], width=0.5)
-        plt.xlabel('Title')
-        plt.ylabel('Number of Ratings')
-        plt.title('Least Reviewed Movies')
-        plt.show()
-        pass  # Display movie names and the rating (Store)
+    def least_reviewed_movies(self):
+        path = '../Images/least_reviewed_movies.png'
+        if not os.path.exists(path):
+            bottom_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
+            bottom_5 = bottom_5['title'].value_counts(ascending=True)
+            bottom_5 = bottom_5.head(5)
+            movie_names = bottom_5.index
+            graph = plt.figure(figsize=(20, 10))
+            plt.bar(movie_names, bottom_5, color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
+            plt.xlabel('Title')
+            plt.ylabel('Number of Ratings')
+            plt.title('Least Reviewed Movies')
+            plt.show()  # plt.savefig(path)
+        return path  # Display movie names and the rating
 
     def movie_analytics(self):
         pass  # Movie name -> pie charge of ratings in each category (Create)
 
     def movies_per_star_rating(self):
-        star = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId',
-                                                 how='left').drop(['userId', 'timestamp'], axis=1).groupby(
-            'movieId').mean()
-        star = star.groupby(pd.cut(star.rating, [0, 1, 2, 3, 4, 5])).count()
-        print(star.values)
-        pie = plt.figure()
-        axis = pie.add_axes([0, 0, 1, 1])
-        axis.axis('equal')
-        headings = ['0 - 1 Star', '1  - 2 Star', '2 - 3 Star', '3 - 4 Star', '4 - 5 Star']
-        print(star)
-        ratings = [x[0] for x in star.values]
-        print(ratings)
-        axis.pie(ratings, labels=headings, autopct='%1.2f%%')
-        plt.show()
-        pass  # For each star rating, how many movies in each category (Create)
+        path = '../Images/movies_per_star.png'
+        if not os.path.exists(path):
+            star = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId',
+                            how='left').drop(['userId', 'timestamp'], axis=1).groupby(
+                'movieId').mean()
+            star = star.groupby(pd.cut(star.rating, [0, 1, 2, 3, 4, 5])).count()
+            print(star.values)
+            pie = plt.figure()
+            axis = pie.add_axes([0, 0, 1, 1])
+            axis.axis('equal')
+            headings = ['0 - 1 Star', '1  - 2 Star', '2 - 3 Star', '3 - 4 Star', '4 - 5 Star']
+            print(star)
+            ratings = [x[0] for x in star.values]
+            print(ratings)
+            axis.pie(ratings, labels=headings, autopct='%1.2f%%')
+            plt.show()  # plt.savefig(path)
+        return path  # For each star rating, how many movies in each category
 
     def highest_rated_movies(self):
-        highest = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId').drop(['userId',
-                                                                                                   'timestamp', 'genres'
-                                                                                                      , 'movieId'],
-                                                                                                  axis=1)
-        highest = (highest.groupby('title').mean('rating')).sort_values('rating', ascending=False)
-        print(highest)
-        pass
-
-    def lowest_rated_movies(self):
-        pass
+        path = '../highest_rated_movies.png'
+        if not os.path.exists(path):
+            highest = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId').drop(['userId',
+                                                                                                       'timestamp', 'genres'
+                                                                                                          , 'movieId'],
+                                                                                                      axis=1)
+            highest = (highest.groupby('title').mean('rating')).sort_values('rating', ascending=False)
+            print(highest)
+            most_reviewed = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
+            most_reviewed = most_reviewed['title'].value_counts(ascending=False)
+            print(most_reviewed.index)
+            d = {'title': most_reviewed.index, 'reviews': most_reviewed.values}
+            most_reviewed = pd.DataFrame(d)
+            highest = pd.merge(most_reviewed, highest, left_on='title', right_on='title')
+            print(highest)
+            highest = highest[highest['reviews'] >= 5]
+            print(highest)
+            highest = highest.sort_values('rating', ascending=False)
+            highest = highest.head(5).drop(['reviews'], axis=1)
+            print(highest)
+            graph = plt.figure(figsize=(20, 10))
+            plt.bar(highest['title'], highest['rating'], color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
+            plt.xlabel('Title')
+            plt.ylabel('Average rating', )
+            plt.title('Highest Rated Movies')
+            plt.show()
+            #  plt.savefig(path)
+        return path

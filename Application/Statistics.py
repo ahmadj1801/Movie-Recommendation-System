@@ -26,4 +26,7 @@ def clean_titles(titles):
         new_movie_names.append(new_title.strip())
     return new_movie_names'''
 m = MoviesData()
-m.movies_per_star_rating()
+print(m.movies_per_star_rating())
+print(m.most_reviewed_movies())
+print(m.least_reviewed_movies())
+m.highest_rated_movies()
