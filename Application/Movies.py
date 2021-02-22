@@ -85,14 +85,14 @@ class MoviesData:
     # ==================================== Data Analytics =====================================
 
     def most_reviewed_movies(self):
-        path = '../Images/most_reviewed__movies.png'
+        path = '../Images/most_reviewed_movies.png'
         if not os.path.exists(path):
             top_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
             top_5 = top_5['title'].value_counts(ascending=False)
             top_5 = top_5.head(5)
             movie_names = top_5.index
             graph = plt.figure(figsize=(20, 10))
-            plt.bar(movie_names, top_5, color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
+            plt.bar(movie_names, top_5, color=['teal', 'yellowgreen', 'crimson'], width=0.5)
             plt.xlabel('Title')
             plt.ylabel('Number of Ratings')
             plt.title('Most Reviewed Movies')
@@ -107,15 +107,12 @@ class MoviesData:
             bottom_5 = bottom_5.head(5)
             movie_names = bottom_5.index
             graph = plt.figure(figsize=(20, 10))
-            plt.bar(movie_names, bottom_5, color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
+            plt.bar(movie_names, bottom_5, color=['goldenrod', 'steelblue', 'coral'], width=0.5)
             plt.xlabel('Title')
             plt.ylabel('Number of Ratings')
             plt.title('Least Reviewed Movies')
             plt.show()  # plt.savefig(path)
         return path  # Display movie names and the rating
-
-    def movie_analytics(self):
-        pass  # Movie name -> pie charge of ratings in each category (Create)
 
     def movies_per_star_rating(self):
         path = '../Images/movies_per_star.png'
@@ -132,7 +129,8 @@ class MoviesData:
             print(star)
             ratings = [x[0] for x in star.values]
             print(ratings)
-            axis.pie(ratings, labels=headings, autopct='%1.2f%%')
+            axis.pie(ratings, labels=headings, autopct='%1.2f%%', colors=['goldenrod', 'crimson', 'blueviolet',
+                                                                          'teal', 'yellowgreen'])
             plt.show()  # plt.savefig(path)
         return path  # For each star rating, how many movies in each category
 
@@ -159,7 +157,7 @@ class MoviesData:
             highest = highest.head(5).drop(['reviews'], axis=1)
             print(highest)
             graph = plt.figure(figsize=(20, 10))
-            plt.bar(highest['title'], highest['rating'], color=['teal', 'springgreen', 'mediumaquamarine'], width=0.5)
+            plt.bar(highest['title'], highest['rating'], color=['palevioletred', 'plum', 'powderblue'], width=0.5)
             plt.xlabel('Title')
             plt.ylabel('Average rating', )
             plt.title('Highest Rated Movies')
@@ -186,7 +184,7 @@ class MoviesData:
         #  print(len(frequencies))
         #  print(per_year)
         plt.figure(figsize=(20, 10))
-        plt.plot(release_years, frequencies)
+        plt.plot(release_years, frequencies, color='darkviolet', linewidth=5)
         plt.title('Number of Movie Releases Per Year')
         plt.xlabel('Year')
         plt.ylabel('Number of Movie Releases')

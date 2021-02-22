@@ -180,7 +180,8 @@
       <workItem from="1613760150137" duration="2183000" />
       <workItem from="1613850431514" duration="5426000" />
       <workItem from="1613906852448" duration="5793000" />
-      <workItem from="1613923572343" duration="6346000" />
+      <workItem from="1613923572343" duration="6983000" />
+      <workItem from="1613985454901" duration="3223000" />
     </task>
     <task id="LOCAL-00001" summary="Test Gui form">
       <created>1613047994402</created>
@@ -455,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613916017899</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="New default pic for the new screen&#10;New graph for movies per year">
+      <created>1613930928134</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1613930928134</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +483,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="minor changes" />
     <MESSAGE value="Images not showing" />
     <MESSAGE value="Image Displaying. &#10;Error: Displaying on wrong Form" />
     <MESSAGE value="Images displaying based on selected movie" />
@@ -500,7 +507,8 @@
     <MESSAGE value="Highest rated movie df" />
     <MESSAGE value="Pie chart added - Counts for each star rating" />
     <MESSAGE value="Graphs Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Graphs Done" />
+    <MESSAGE value="New default pic for the new screen&#10;New graph for movies per year" />
+    <option name="LAST_COMMIT_MESSAGE" value="New default pic for the new screen&#10;New graph for movies per year" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="62" key="#Inspections" timestamp="1613306556809">
@@ -515,46 +523,46 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1364" height="440" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1613668049771" />
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
-    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
-    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
-    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
-    <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
-    <state width="1323" height="238" key="GridCell.Tab.1.center" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.1.center" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
-    <state width="1323" height="238" key="GridCell.Tab.1.left" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.1.left" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
-    <state width="1323" height="238" key="GridCell.Tab.1.right" timestamp="1613929107687">
+    <state width="1323" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.1.right" timestamp="1613931183637">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1613929107687" />
+    <state width="1323" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
     <state x="184" y="28" key="SettingsEditor" timestamp="1613047389761">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613916071683">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613931096642">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613916071683" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613931096642" />
     <state x="526" y="156" key="refactoring.ChangeSignatureDialog" timestamp="1613330413107">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -565,12 +573,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>146</line>
+          <line>144</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>126</line>
+          <line>123</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -580,7 +588,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>176</line>
+          <line>174</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

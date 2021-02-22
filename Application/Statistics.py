@@ -36,3 +36,7 @@ x = re.sub('\(', '', x)
 x = re.sub('\)', '', x)
 print(x)'''
 m.movies_per_year()
+m.highest_rated_movies()
+m.movies_per_star_rating()
+m.least_reviewed_movies()
+m.most_reviewed_movies()
