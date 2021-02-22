@@ -16,6 +16,8 @@ class MoviesData:
         self.ratings = pd.read_csv("../Data/ratings.csv")
         self.movies = pd.read_csv("../Data/movies.csv")
         plt.rcParams['font.size'] = 15
+        plt.rc('axes', labelsize=20)
+        plt.style.use('fivethirtyeight')
 
     def get_movie_names(self):
         movie_names = list(self.movies['title'])
@@ -132,7 +134,7 @@ class MoviesData:
         return path  # For each star rating, how many movies in each category
 
     def highest_rated_movies(self):
-        path = '../highest_rated_movies.png'
+        path = '../Images/highest_rated_movies.png'
         if not os.path.exists(path):
             highest = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId').drop(['userId',
                                                                                                        'timestamp',
