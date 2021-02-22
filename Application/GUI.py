@@ -1,12 +1,11 @@
 import tkinter
 import os
-import pandas as pd
-from tkinter import ttk, messagebox
-from PIL import Image, ImageTk
 import numpy as np
 
 from ML import Recommended
 from Movies import MoviesData
+from tkinter import ttk, messagebox
+from PIL import Image, ImageTk
 
 
 def calculate_centre(window):
@@ -75,16 +74,24 @@ class StatisticsForm:
     __lbl_intro = ''
 
     def __init__(self):
-        window = tkinter.Tk()
-        window.title("Data Visualization")
-        window.geometry('400x400')
-        window.rowconfigure([0, 1, 2, 3], minsize=50)
-        window.columnconfigure([0, 1, 2], minsize=100)
-        self.__lbl_intro = tkinter.Label(window, text='Data Visualisation',
-                                         font=("Arial Bold", 15)).grid(row=0, column=1)
+        queries = ['View Highest Rated Movies', 'View Lowest Rated Movies', 'View Most Reviewed Movies',
+                   'View Least Reviewed Movies', 'View Movies Released Per Year', 'View Movies Per Star Rating']
+        self.window = tkinter.Tk()
+        self.window.title("Data Visualization")
+        self.window.geometry('600x400')
+        self.__lbl_intro = tkinter.Label(self.window, text='Data Visualisation',
+                                         font=("Arial Bold", 15)).place(x=220, y=10)
+        self.__drp_query = self.variable = tkinter.StringVar(self.window)
+        self.variable.set("--Select--")
+        self.variable.trace('w', self.option_callback)
+        self.__drp_movie = ttk.Combobox(self.window, values=queries,
+                                        textvariable=self.variable, width=30).place(x=200, y=60)
+
+    def option_callback(self, *args):
+        print(self.variable.get())
 
 
-# ====================================END HomeForm Class================================================
+# ====================================END StatisticsForm Class================================================
 
 class MoviesForm:
 
