@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Modified Colours&#10;Graphs for Least and Most Reviewed Movies Done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics.py" afterDir="false" />
-    </list>
+    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Modified Colours&#10;Graphs for Least and Most Reviewed Movies Done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +177,7 @@
       <workItem from="1613850431514" duration="5426000" />
       <workItem from="1613906852448" duration="5793000" />
       <workItem from="1613923572343" duration="6983000" />
-      <workItem from="1613985454901" duration="3223000" />
+      <workItem from="1613985454901" duration="4205000" />
     </task>
     <task id="LOCAL-00001" summary="Test Gui form">
       <created>1613047994402</created>
@@ -463,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613930928134</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="News Colours to each graph">
+      <created>1613989091791</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1613989091791</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Images not showing" />
     <MESSAGE value="Image Displaying. &#10;Error: Displaying on wrong Form" />
     <MESSAGE value="Images displaying based on selected movie" />
     <MESSAGE value="Images working and ratings images are showing" />
@@ -508,7 +510,8 @@
     <MESSAGE value="Pie chart added - Counts for each star rating" />
     <MESSAGE value="Graphs Done" />
     <MESSAGE value="New default pic for the new screen&#10;New graph for movies per year" />
-    <option name="LAST_COMMIT_MESSAGE" value="New default pic for the new screen&#10;New graph for movies per year" />
+    <MESSAGE value="News Colours to each graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="News Colours to each graph" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="62" key="#Inspections" timestamp="1613306556809">
@@ -523,46 +526,46 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1364" height="440" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1613668049771" />
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
-    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
+    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
-    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
+    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
-    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
+    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
-    <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
+    <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
-    <state width="1323" height="238" key="GridCell.Tab.1.center" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
+    <state width="1323" height="238" key="GridCell.Tab.1.center" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
-    <state width="1323" height="238" key="GridCell.Tab.1.left" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
+    <state width="1323" height="238" key="GridCell.Tab.1.left" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
-    <state width="1323" height="238" key="GridCell.Tab.1.right" timestamp="1613931183637">
+    <state width="1323" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
+    <state width="1323" height="238" key="GridCell.Tab.1.right" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1613931183637" />
+    <state width="1323" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1613989853283" />
     <state x="184" y="28" key="SettingsEditor" timestamp="1613047389761">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613931096642">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1613989194798">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613931096642" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613989194798" />
     <state x="526" y="156" key="refactoring.ChangeSignatureDialog" timestamp="1613330413107">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -573,29 +576,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>144</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>123</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Statistics.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Movies.py</url>
-          <line>174</line>
-          <option name="timeStamp" value="5" />
+          <line>88</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Application$Statistics.coverage" NAME="Statistics Coverage Results" MODIFIED="1613929086583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Application$Statistics.coverage" NAME="Statistics Coverage Results" MODIFIED="1613988959971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1613679354182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Application$Movies.coverage" NAME="Movies Coverage Results" MODIFIED="1613152949555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

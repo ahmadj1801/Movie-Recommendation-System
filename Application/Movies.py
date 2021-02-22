@@ -96,7 +96,7 @@ class MoviesData:
             plt.xlabel('Title')
             plt.ylabel('Number of Ratings')
             plt.title('Most Reviewed Movies')
-            plt.show()  # plt.savefig(path)
+            plt.savefig(path)
         return path  # Display movie names and the rating (Store)
 
     def least_reviewed_movies(self):
@@ -111,7 +111,7 @@ class MoviesData:
             plt.xlabel('Title')
             plt.ylabel('Number of Ratings')
             plt.title('Least Reviewed Movies')
-            plt.show()  # plt.savefig(path)
+            plt.savefig(path)
         return path  # Display movie names and the rating
 
     def movies_per_star_rating(self):
@@ -121,17 +121,14 @@ class MoviesData:
                             how='left').drop(['userId', 'timestamp'], axis=1).groupby(
                 'movieId').mean()
             star = star.groupby(pd.cut(star.rating, [0, 1, 2, 3, 4, 5])).count()
-            print(star.values)
             pie = plt.figure()
             axis = pie.add_axes([0, 0, 1, 1])
             axis.axis('equal')
             headings = ['0 - 1 Star', '1  - 2 Star', '2 - 3 Star', '3 - 4 Star', '4 - 5 Star']
-            print(star)
             ratings = [x[0] for x in star.values]
-            print(ratings)
             axis.pie(ratings, labels=headings, autopct='%1.2f%%', colors=['goldenrod', 'crimson', 'blueviolet',
                                                                           'teal', 'yellowgreen'])
-            plt.show()  # plt.savefig(path)
+            plt.savefig(path)
         return path  # For each star rating, how many movies in each category
 
     def highest_rated_movies(self):
@@ -143,50 +140,44 @@ class MoviesData:
                                                                                                           , 'movieId'],
                                                                                                       axis=1)
             highest = (highest.groupby('title').mean('rating')).sort_values('rating', ascending=False)
-            print(highest)
             most_reviewed = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
             most_reviewed = most_reviewed['title'].value_counts(ascending=False)
-            print(most_reviewed.index)
             d = {'title': most_reviewed.index, 'reviews': most_reviewed.values}
             most_reviewed = pd.DataFrame(d)
             highest = pd.merge(most_reviewed, highest, left_on='title', right_on='title')
-            print(highest)
             highest = highest[highest['reviews'] >= 5]
-            print(highest)
             highest = highest.sort_values('rating', ascending=False)
             highest = highest.head(5).drop(['reviews'], axis=1)
-            print(highest)
             graph = plt.figure(figsize=(20, 10))
             plt.bar(highest['title'], highest['rating'], color=['palevioletred', 'plum', 'powderblue'], width=0.5)
             plt.xlabel('Title')
             plt.ylabel('Average rating', )
             plt.title('Highest Rated Movies')
-            plt.show()
-            #  plt.savefig(path)
+            plt.savefig(path)
         return path
 
     def movies_per_year(self):
-        titles = self.movies['title']
-        per_year = dict()
-        release_years = []
-        frequencies = []
-        c = 0
-        for title in titles:
-            year = str(self.get_year(title))
-            if year not in per_year.keys():
-                per_year[year] = 1
-            else:
-                per_year[year] = per_year.get(year) + 1
-        for i in sorted(per_year):
-            release_years.append(i)
-            frequencies.append(int(per_year[i]))
-        #  print(len(release_years))
-        #  print(len(frequencies))
-        #  print(per_year)
-        plt.figure(figsize=(20, 10))
-        plt.plot(release_years, frequencies, color='darkviolet', linewidth=5)
-        plt.title('Number of Movie Releases Per Year')
-        plt.xlabel('Year')
-        plt.ylabel('Number of Movie Releases')
-        plt.xticks(release_years[::10])
-        plt.show()
+        path = '../Images/movies_per_year.png'
+        if not os.path.exists(path):
+            titles = self.movies['title']
+            per_year = dict()
+            release_years = []
+            frequencies = []
+            c = 0
+            for title in titles:
+                year = str(self.get_year(title))
+                if year not in per_year.keys():
+                    per_year[year] = 1
+                else:
+                    per_year[year] = per_year.get(year) + 1
+            for i in sorted(per_year):
+                release_years.append(i)
+                frequencies.append(int(per_year[i]))
+            plt.figure(figsize=(20, 10))
+            plt.plot(release_years, frequencies, color='darkviolet', linewidth=5)
+            plt.title('Number of Movie Releases Per Year')
+            plt.xlabel('Year')
+            plt.ylabel('Number of Movie Releases')
+            plt.xticks(release_years[::10])
+            plt.savefig(path)
+        return path
