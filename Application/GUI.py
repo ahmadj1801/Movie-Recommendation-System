@@ -74,21 +74,45 @@ class StatisticsForm:
     __lbl_intro = ''
 
     def __init__(self):
-        queries = ['View Highest Rated Movies', 'View Lowest Rated Movies', 'View Most Reviewed Movies',
-                   'View Least Reviewed Movies', 'View Movies Released Per Year', 'View Movies Per Star Rating']
-        self.window = tkinter.Tk()
+        self.queries = ['View Highest Rated Movies', 'View Most Reviewed Movies',
+                        'View Least Reviewed Movies', 'View Movies Released Per Year', 'View Movies Per Star Rating']
+        self.window = tkinter.Toplevel()
         self.window.title("Data Visualization")
-        self.window.geometry('600x400')
+        self.window.geometry('900x600')
+        self.movie_data = MoviesData()
         self.__lbl_intro = tkinter.Label(self.window, text='Data Visualisation',
-                                         font=("Arial Bold", 15)).place(x=220, y=10)
+                                         font=("Arial Bold", 15)).place(x=375, y=10)
         self.__drp_query = self.variable = tkinter.StringVar(self.window)
         self.variable.set("--Select--")
         self.variable.trace('w', self.option_callback)
-        self.__drp_movie = ttk.Combobox(self.window, values=queries,
-                                        textvariable=self.variable, width=30).place(x=200, y=60)
+        self.__drp_movie = ttk.Combobox(self.window, values=self.queries,
+                                        textvariable=self.variable, width=30).place(x=350, y=60)
+        self.__lbl_visual = self.img = self.image_path = ''
+        self.display_image('../Images/data_vis_placeholder.png')
 
     def option_callback(self, *args):
-        print(self.variable.get())
+        option = self.variable.get()
+        option_number = self.queries.index(option)  # 0 to 5
+        path = '../Images/data_vis_placeholder.png'
+        if option_number == 0:
+            path = self.movie_data.highest_rated_movies()
+        elif option_number == 1:
+            path = self.movie_data.most_reviewed_movies()
+        elif option_number == 2:
+            path = self.movie_data.least_reviewed_movies()
+        elif option_number == 3:
+            path = self.movie_data.movies_per_year()
+        else:
+            path = self.movie_data.movies_per_star_rating()
+        self.display_image(path)
+
+    def display_image(self, string_path):
+        self.image_path = Image.open(string_path)
+        self.image_path = self.image_path.resize((700, 400), Image.NORMAL)
+        self.img = ImageTk.PhotoImage(self.image_path)
+        self.__lbl_visual = tkinter.Label(self.window, image=self.img)
+        self.__lbl_visual.image = self.img
+        self.__lbl_visual.place(x=100, y=100)
 
 
 # ====================================END StatisticsForm Class================================================
