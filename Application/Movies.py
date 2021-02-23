@@ -12,54 +12,66 @@ class MoviesData:
 
     # Read CSV Files
     def read_data(self):
+        # Read Data
         self.ratings = pd.read_csv("../Data/ratings.csv")
         self.movies = pd.read_csv("../Data/movies.csv")
+        # Set Mat-plot-Lib up
         plt.rcParams['font.size'] = 15
         plt.rc('axes', labelsize=20)
         plt.style.use('fivethirtyeight')
 
+    # List of Movie Titles
     def get_movie_names(self):
+        # Convert to List
         movie_names = list(self.movies['title'])
+        # Sort
         movie_names.sort()
         return movie_names
 
+    # Return movie Data Frame
     def get_movie_data_frame(self):
         return self.movies
 
+    # Return Ratings Data Frame
     def get_ratings_data_frame(self):
         return self.ratings
 
+    # Filtered Data Frame on a Specific Movie Title
     def get_filtered_df(self, movie_name):
         df = self.movies[self.movies.title == movie_name]
         return df
 
+    # Average Ratings
     def get_average_rating(self, movie_name):
         df = self.get_filtered_df(movie_name)
-        print(df)
+        # Drop Unnecessary Columns - Use Mean
         average_ratings: pd.DataFrame = pd.merge(df, self.ratings, left_on='movieId', right_on='movieId',
                                                  how='left').drop(['userId', 'timestamp'], axis=1).groupby(
             'movieId').mean()
-        print(average_ratings)
+        # Return Average Ratings - 2 Decimal Places
         return round((average_ratings['rating'].tolist())[0], 2)
 
+    # Total Reviews on a Specific Movie
     def get_total_number_of_reviews(self, movie_name):
         df = self.get_filtered_df(movie_name)
+        # Merging Based on ID
         df: pd.DataFrame = pd.merge(df, self.ratings, left_on='movieId', right_on='movieId',
                                     how='left').drop(['userId', 'timestamp'], axis=1)
+        # Shape will give size
         total_count = df.shape[0]
         return total_count
 
+    # Number of Ratings per Star Level
     def get_number_of_x_ratings(self, movie_name, star_levels):
         df = self.get_filtered_df(movie_name)
+        # Columns - movieId, rating, genres
         df: pd.DataFrame = pd.merge(df, self.ratings, left_on='movieId', right_on='movieId',
                                     how='left').drop(['userId', 'timestamp'], axis=1)
-        print(df)
         df = df.groupby(pd.cut(df.rating, star_levels)).count()
-        print(df)
         df = df['rating'].tolist()
-        print(df)
         return df
 
+    # Method to Format the Movie Title
     @staticmethod
     def format_name(movie_name):
         c = 1
@@ -72,8 +84,10 @@ class MoviesData:
             c = c + 1
         return new_name
 
+    # Return Release Year - IF Irregular Format, return 0
     def get_year(self, movie_name):
         year = 0
+        # Regular Expressions to find the Year
         year = re.findall('\([0-9]{4}\)', movie_name)
         if year != []:
             year = year[0]
@@ -85,6 +99,7 @@ class MoviesData:
 
     # ==================================== Data Analytics =====================================
 
+    # Graph Most Reviewed Movies
     def most_reviewed_movies(self):
         path = '../Images/most_reviewed_movies.png'
         if not os.path.exists(path):
@@ -100,6 +115,7 @@ class MoviesData:
             plt.savefig(path)
         return path  # Display movie names and the rating (Store)
 
+    # Graph Least Reviewed Movies
     def least_reviewed_movies(self):
         path = '../Images/least_reviewed_movies.png'
         if not os.path.exists(path):
@@ -115,6 +131,7 @@ class MoviesData:
             plt.savefig(path)
         return path  # Display movie names and the rating
 
+    # Pie Chart
     def movies_per_star_rating(self):
         path = '../Images/movies_per_star.png'
         if not os.path.exists(path):
@@ -132,6 +149,7 @@ class MoviesData:
             plt.savefig(path)
         return path  # For each star rating, how many movies in each category
 
+    # Graph Highest Rated Movies
     def highest_rated_movies(self):
         path = '../Images/highest_rated_movies.png'
         if not os.path.exists(path):
@@ -157,6 +175,7 @@ class MoviesData:
             plt.savefig(path)
         return path
 
+    # Line Graph of Movies Per Year
     def movies_per_year(self):
         path = '../Images/movies_per_year.png'
         if not os.path.exists(path):
