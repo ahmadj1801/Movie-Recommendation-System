@@ -6,10 +6,20 @@ The project contains three Parts:
 3. Movie Recommendations
 
 # Viewing Movies
-Pick a movie from the combobox and view the ratings of the movie
 
-# Data Analysis
+Pick a movie from the combo box and view all the ratings of the movie
+
+# Data Visualization
+
+A series of graphs that visualise certain aspects of the data
 
 
 # Movie Recommendations
-Recommendations are done on a user collaborative approach
+
+The user is prompted to rate a few movies that he/she has watched.
+
+1. Select a movie
+2. Give the movie a rating
+3. Click the recommendation button, to get a list of suggested movies
+
+The recommendations are done on a user collaborative approach
