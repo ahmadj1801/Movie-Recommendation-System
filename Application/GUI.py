@@ -71,7 +71,6 @@ class HomeForm:
 
 
 class StatisticsForm:
-    __lbl_intro = ''
 
     def __init__(self):
         self.queries = ['View Highest Rated Movies', 'View Most Reviewed Movies',
@@ -88,12 +87,12 @@ class StatisticsForm:
         self.__drp_movie = ttk.Combobox(self.window, values=self.queries,
                                         textvariable=self.variable, width=30).place(x=350, y=60)
         self.__lbl_visual = self.img = self.image_path = ''
-        self.display_image('../Images/data_vis_placeholder.png')
+        self.display_image('../Images/data_vis.gif')
+        self.window.mainloop()
 
     def option_callback(self, *args):
         option = self.variable.get()
-        option_number = self.queries.index(option)  # 0 to 5
-        path = '../Images/data_vis_placeholder.png'
+        option_number = self.queries.index(option)  # 0 to 4
         if option_number == 0:
             path = self.movie_data.highest_rated_movies()
         elif option_number == 1:
