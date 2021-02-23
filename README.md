@@ -24,4 +24,5 @@ The user is prompted to rate a few movies that he/she has watched.
 4. Click the recommendation button, to get a list of suggested movies
     - The Cold Start Problem is not tackled
     - Movies with less than 5 ratings will not be used to generate recommendations
+
 The recommendations are done on a user collaborative approach
