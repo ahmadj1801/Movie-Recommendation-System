@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Modified Colours&#10;Graphs for Least and Most Reviewed Movies Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +184,7 @@
       <workItem from="1613923572343" duration="6983000" />
       <workItem from="1613985454901" duration="4205000" />
       <workItem from="1614004628488" duration="10323000" />
-      <workItem from="1614054385309" duration="844000" />
+      <workItem from="1614054385309" duration="1659000" />
     </task>
     <task id="LOCAL-00001" summary="Test Gui form">
       <created>1613047994402</created>
@@ -502,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614022432764</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Updated placeholder image">
+      <created>1614055600084</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1614055600084</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +528,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added 0 star images - Not used&#10;Calculated Average ratings per Movie&#10;Update stars as movie changes&#10;total number of reviews per movie" />
     <MESSAGE value="Moved 2 methods to Movie.py" />
     <MESSAGE value="Moved 2 methods to Movie.py&#10;String Format for the name display on the window" />
     <MESSAGE value="Moved 2 methods to Movie.py&#10;String Format for the name display on the window&#10;Added individual star ratings" />
@@ -547,7 +552,8 @@
     <MESSAGE value="Gui components for data vis form" />
     <MESSAGE value="Displaying Images on the gui" />
     <MESSAGE value="Small Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small Changes" />
+    <MESSAGE value="Updated placeholder image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated placeholder image" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="62" key="#Inspections" timestamp="1613306556809">
@@ -562,22 +568,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1364" height="440" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1613668049771" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614022563282">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614056117056">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614022563282" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614022563282">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614056117056" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614056117056">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614022563282" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614022563282">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614056117056" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614056117056">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614022563282" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614022563282">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614056117056" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614056117056">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614022563282" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614056117056" />
     <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -598,10 +604,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614022443028">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614055623937">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614022443028" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614055623937" />
     <state x="526" y="156" key="refactoring.ChangeSignatureDialog" timestamp="1613330413107">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
