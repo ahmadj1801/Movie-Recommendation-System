@@ -2,7 +2,7 @@
 
 The project contains three Parts:
 1. Viewing Movies
-2. Data Analysis
+2. Data Visualization
 3. Movie Recommendations
 
 # Viewing Movies
