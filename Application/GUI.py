@@ -8,6 +8,7 @@ from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
 
 
+# Window Position
 def calculate_centre(window):
     position_right = position_down = 0
     win_width = window.winfo_reqwidth()
@@ -17,6 +18,7 @@ def calculate_centre(window):
     return position_right, position_down
 
 
+# Class For the Main Screen
 class HomeForm:
     # Private Class attributes
     __lbl_intro = __btn_movies = __btn_stats = __btn_recommendation = ''
@@ -48,51 +50,63 @@ class HomeForm:
         # Window Stays Open until closed
         window.mainloop()
 
+    '''Callback Methods'''
+
     @staticmethod
     def btn_movies_click():
         # Open Movies Page
         movie_form = MoviesForm()
-        pass
 
     @staticmethod
     def btn_stats_click():
         # Open Stats Page
         stats_form = StatisticsForm()
-        pass
 
     @staticmethod
     def btn_recommendation_click():
         # Open Movie Recommendation Page
         recommendation_form = MovieRecommendationForm()
-        pass
 
 
 # ====================================END HomeForm Class================================================
 
-
+# Class That Displays Graphs
 class StatisticsForm:
 
     def __init__(self):
+        # All Available Queries
         self.queries = ['View Highest Rated Movies', 'View Most Reviewed Movies',
                         'View Least Reviewed Movies', 'View Movies Released Per Year', 'View Movies Per Star Rating']
+        # Top Level -> Displays on top
         self.window = tkinter.Toplevel()
+        # Title
         self.window.title("Data Visualization")
+        # Dimensions
         self.window.geometry('900x600')
+        # Create a Data Object as part of the class
         self.movie_data = MoviesData()
+        # Main Label
         self.__lbl_intro = tkinter.Label(self.window, text='Data Visualisation',
                                          font=("Arial Bold", 15)).place(x=375, y=10)
+        # Combo Box Setup
         self.__drp_query = self.variable = tkinter.StringVar(self.window)
         self.variable.set("--Select--")
         self.variable.trace('w', self.option_callback)
         self.__drp_movie = ttk.Combobox(self.window, values=self.queries,
                                         textvariable=self.variable, width=30).place(x=350, y=60)
         self.__lbl_visual = self.img = self.image_path = ''
+        # Default Image to be displayed -> On Creation
         self.display_image('../Images/data_vis.gif')
+        # Run
         self.window.mainloop()
 
+    # Call back Method on Combo Box
     def option_callback(self, *args):
+        # Text of Option Chosen
         option = self.variable.get()
+        # Index of Option Chosen
         option_number = self.queries.index(option)  # 0 to 4
+        # Display Get Path to Graph
         if option_number == 0:
             path = self.movie_data.highest_rated_movies()
         elif option_number == 1:
@@ -103,8 +117,10 @@ class StatisticsForm:
             path = self.movie_data.movies_per_year()
         else:
             path = self.movie_data.movies_per_star_rating()
+        # Display Graph
         self.display_image(path)
 
+    # Display Appropriate Graph
     def display_image(self, string_path):
         self.image_path = Image.open(string_path)
         self.image_path = self.image_path.resize((700, 400), Image.NORMAL)
@@ -116,6 +132,7 @@ class StatisticsForm:
 
 # ====================================END StatisticsForm Class================================================
 
+# Class to Handle Viewing of Movies
 class MoviesForm:
 
     def __init__(self):
@@ -198,9 +215,11 @@ class MoviesForm:
         # Window Stays Open until closed
         self.window.mainloop()
 
+    # CallBack on Combo Box
     def option_callback(self, *args):
-        print(self.variable.get())
+        self.variable.get()
 
+    # Callback Method. Called When Button Clicked
     def btn_submit_click(self):
         # Get Text from Combo box
         movie_name = str(self.variable.get())
@@ -215,19 +234,21 @@ class MoviesForm:
         total_reviews = self.movie_data.get_total_number_of_reviews(movie_name)
         self.__avg_rating.set(str(avg_rating) + " ( " + str(total_reviews) + " )")
         # Update Stars
-        print(self.load_stars(avg_rating))
         self.display_stars(self.load_stars(avg_rating), self.__lbl_avg_rating, 5, 1)
         # Set Name in the Label
         self.text.set(self.movie_data.format_name(movie_name))
         ratings = self.movie_data.get_number_of_x_ratings(movie_name, [0, 1.9, 2.9, 3.9, 4.9, 5])
         self.display_ratings(ratings)
 
+    # Display the Average Rating Star Picture
     def load_stars(self, rating):
         path = '../Images/'
         switch = {0: '1stars.png', 1: '1stars.png', 2: '2stars.png', 3: '3stars.png', 4: '4stars.png', 5: '5stars.png'}
+        # Choose Lower -> 3.6 displays 3 Stars
         path = path + switch.get(np.floor(rating))
         return path
 
+    # Display Movie Logo
     def display_logo_picture(self, string_path):
         self.__image_path = Image.open(string_path)
         self.__image_path = self.__image_path.resize((125, 150), Image.NONE)
@@ -236,6 +257,7 @@ class MoviesForm:
         self.__lbl_logo.image = self.__image
         self.__lbl_logo.grid(row=1, column=0)
 
+    # Display Stars
     def display_stars(self, string_path, label, r, c):
         path = Image.open(string_path)
         path = path.resize((100, 20), Image.NORMAL)
@@ -244,6 +266,7 @@ class MoviesForm:
         label.image = img
         label.grid(row=r, column=c)
 
+    # Display Textual Ratings - Per Star Level
     def display_ratings(self, ratings):
         self.__star5.set("(" + str(ratings[4]) + ")")
         self.__star4.set("(" + str(ratings[3]) + ")")
@@ -254,23 +277,31 @@ class MoviesForm:
 
 # ====================================END MoviesForm Class================================================
 
-
+# A Class to Handle The Graphical Aspect of the Recommendation Form
 class MovieRecommendationForm:
 
     def __init__(self):
+        # Display on Top
         self.window = tkinter.Toplevel()
+        # Title
         self.window.title("Movie Recommendations")
         self.window.geometry('650x550')
         # Movie Data Frames
         self.movie_data = MoviesData()
+        # Main Heading
         self.__lbl_intro = tkinter.Label(self.window, text='Movie Recommendation',
                                          font=("Arial Bold", 15)).place(x=240, y=20)
+        # Secondary Heading
         self.__lbl_my_recommendation = tkinter.Label(self.window, text='My Recommendations',
                                                      font=("Arial Bold", 15)).place(x=240, y=320)
+        # Label Prompt
         self.__lbl_drp = tkinter.Label(self.window, text="Select a Movie:").place(x=10, y=70)
+        # Label Prompt
         self.__lbl_sld = tkinter.Label(self.window, text="Enter a Rating:").place(x=10, y=130)
+        # Confirm Button
         self.__btn_submit = tkinter.Button(self.window, text="Confirm Rating",
                                            command=self.btn_submit_click).place(x=145, y=180)
+        # Recommend Button
         self.__btn_recommend = tkinter.Button(self.window, text="Recommend Me Movies",
                                               command=self.btn_recommend_click).place(x=122, y=220)
         # Set Up Drop Down Component
@@ -291,34 +322,45 @@ class MovieRecommendationForm:
         # Set Up Recommended List Box
         self.__lst_recommended = tkinter.Listbox(self.window, width=80, height=10)
         self.__lst_recommended.place(x=80, y=350)
+        # Dictionary of Movies Watched and the Users Respective Ratings on Them
         self.watched = dict()
 
+    # CallBack Method -> Submit Button
     def btn_submit_click(self):
+        # Get the movie from the Combo Box
         movie_name = self.variable.get()
+        # Get the Rating
         rating = self.var.get()
+        # Add/Override if exists
         self.watched[movie_name] = rating
         full_string = movie_name + " " + str(rating)
-        print(self.watched)
-        print(full_string)
         # Add to List
         self.__lst_watched.insert(tkinter.END, full_string)
         pass
 
+    # Callback on Recommend Button
     def btn_recommend_click(self):
+        # Check User has Rated Movies
         if self.__lst_watched.size() != 0:
+            # Recommendation object
             ml = Recommended(self.watched)
             # recommend method on ml -> return array
             suggestions: [] = ml.get_recommendations
             # update recommend list box
             self.update_recommendations(suggestions)
         else:
+            # Insufficient Ratings on inputted movies Error
             messagebox.showerror('Error', "Please Rate At Least ONE Movie!")
 
+    # CallBack on Combo Box
     def option_callback(self, *args):
-        print(self.variable.get())
+        self.variable.get()
 
+    # Update List box
     def update_recommendations(self, suggestions):
+        # Remove Existing Recommendations
         self.__lst_recommended.delete(0, tkinter.END)
+        # Add to List Box
         for suggestion in suggestions:
             self.__lst_recommended.insert(tkinter.END, suggestion)
 
