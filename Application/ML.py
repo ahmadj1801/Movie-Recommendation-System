@@ -29,14 +29,17 @@ class Recommended:
         # Similarity Values
         user_similarity = movie_rating.corr(method='pearson')
         col = user_similarity.columns
-        for movie in self.__user_watched:  #
+        for movie in self.__user_watched:
+            # Check The movie the user rated has not been dropped due to < 5 overall ratings
             if movie in col:
                 self.sim = self.sim.append(self.get_recommended_movies(user_similarity, movie,
                                                                        self.__user_watched.get(movie)),
                                            ignore_index=True)
-        print(self.sim.head())
+        # Movies Sorted -> highest to Lowest Rating
         sorted_recommendations = self.sim.sum().sort_values(ascending=False)
+        # List of Recommendation Titles
         names = []
+        # If No Recommendations
         if len(sorted_recommendations) == 0:
             messagebox.showinfo('Insufficient Ratings', 'The movie(s) that you have provided\n'
                                                         'have insufficient ratings to produce\n'
@@ -44,13 +47,15 @@ class Recommended:
                                                         'more movies.')
             return names
         else:
-            print(sorted_recommendations.index)
+            # Get Titles
             names = sorted_recommendations.index
+            # Remove The Movies That the User Has Watched
             final_recommendations = [i for i in names if i not in self.__user_watched]
-            print(final_recommendations)
+            # Return Top 10
             return final_recommendations[0:10]
 
     def get_recommended_movies(self, sim_df, movie_name, user_rating):
+        # A Users Rating will be considered Good if > 2.5
         score = sim_df[movie_name] * (float(user_rating) - 2.5)
         score.sort_values(ascending=False)
         return score
