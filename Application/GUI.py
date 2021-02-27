@@ -239,7 +239,6 @@ class MoviesForm:
         movie_name = str(self.variable.get())
         # Look for Picture Online - look locally
         file_path = "../Images/Movies/" + self.movie_data.save_file_name(self.movie_data, movie_name) + '.png'
-        print(file_path)
         if not os.path.exists(file_path):
             file_path = "../Images/error.png"
         self.display_logo_picture(file_path)
