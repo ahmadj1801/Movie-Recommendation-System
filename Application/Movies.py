@@ -88,7 +88,7 @@ class MoviesData:
     def save_file_name(self, title):
         clean_title = ''
         # Remove Punctuation
-        clean_title = re.sub('\'|\,|\.|\_', '', title)
+        clean_title = re.sub('\'|\,|\.|\_|\*', '', title)
         # Only Want Characters
         return clean_title
 
