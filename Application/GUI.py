@@ -223,7 +223,7 @@ class MoviesForm:
         title = self.movie_data.save_file_name(self.movie_data, title)
         print(title)
         tkinter.Tk().withdraw()
-        file = askopenfilename()
+        file = askopenfilename(filetypes=[('image types', ('.png', '.jpg'))])
         print(file)
 
     # CallBack on Combo Box
