@@ -84,6 +84,15 @@ class MoviesData:
             c = c + 1
         return new_name
 
+    @staticmethod
+    def save_file_name(self, title):
+        clean_title = ''
+        # Remove Punctuation
+        clean_title = re.sub('\'|\,|\.|\_', '', title)
+        # Only Want Characters
+        return clean_title
+
+    @staticmethod
     # Return Release Year - IF Irregular Format, return 0
     def get_year(self, movie_name):
         year = 0
