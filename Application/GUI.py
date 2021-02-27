@@ -139,8 +139,8 @@ class MoviesForm:
         # Main Window
         self.window = tkinter.Toplevel()
         self.window.title("Movies")
-        self.window.geometry('500x400')
-        self.window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8], minsize=20)
+        self.window.geometry('500x420')
+        self.window.rowconfigure([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], minsize=20)
         self.window.columnconfigure([0, 1, 2], minsize=200)
         # Movie Data Frames
         self.movie_data = MoviesData()
@@ -157,60 +157,61 @@ class MoviesForm:
         # Set Up Movie Logo
         self.__image_path = self.__image_path = self.__image = self.__lbl_logo = ''
         self.display_logo_picture("../Images/placeholder.png")
+        self.upload_image = tkinter.Button(self.window, text='Upload', width=10).grid(row=2, column=0)
         # Set Up Review label
         self.__lbl_review = tkinter.Label(self.window, text="Reviews", font=("Arial Bold", 10)
-                                          ).grid(row=3, column=0)
+                                          ).grid(row=4, column=0)
         # Set up star Images
         self.__lbl_5stars = ''
-        self.display_stars("../Images/5stars.png", self.__lbl_5stars, 4, 0)
+        self.display_stars("../Images/5stars.png", self.__lbl_5stars, 5, 0)
         self.__lbl_4stars = ''
-        self.display_stars("../Images/4stars.png", self.__lbl_4stars, 5, 0)
+        self.display_stars("../Images/4stars.png", self.__lbl_4stars, 6, 0)
         self.__lbl_3stars = ''
-        self.display_stars("../Images/3stars.png", self.__lbl_3stars, 6, 0)
+        self.display_stars("../Images/3stars.png", self.__lbl_3stars, 7, 0)
         self.__lbl_2stars = ''
-        self.display_stars("../Images/2stars.png", self.__lbl_2stars, 7, 0)
+        self.display_stars("../Images/2stars.png", self.__lbl_2stars, 8, 0)
         self.__lbl_1stars = ''
-        self.display_stars("../Images/1stars.png", self.__lbl_1stars, 8, 0)
+        self.display_stars("../Images/1stars.png", self.__lbl_1stars, 9, 0)
         # Name Label
         self.text = tkinter.StringVar()
         self.text.set("")
         self.__lbl_name = tkinter.Label(self.window, textvariable=self.text,
                                         font=("Arial Bold", 15)).grid(row=1, column=1)
         # Rating Label
-        self.__rating = tkinter.Label(self.window, text="Average Rating", font=("Arial Bold", 10)).grid(row=4, column=1)
+        self.__rating = tkinter.Label(self.window, text="Average Rating", font=("Arial Bold", 10)).grid(row=5, column=1)
         # Star Image
         self.__lbl_rating_stars = ''
-        self.display_stars("../Images/3stars.png", self.__lbl_rating_stars, 5, 1)
+        self.display_stars("../Images/3stars.png", self.__lbl_rating_stars, 6, 1)
         # Rating Value
         self.__avg_rating = tkinter.StringVar()
         self.__avg_rating.set("None")
         self.__lbl_avg_rating = tkinter.Label(self.window, textvariable=self.__avg_rating, font=("Arial Bold", 8)).grid(
-            row=6, column=1)
+            row=7, column=1)
         # Individual star ratings
         self.__star5 = tkinter.StringVar()
         self.__star5.set("(0)")
         self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star5, font=("Arial Bold", 8)).grid(
-            row=4, column=0, sticky=tkinter.E, padx=30)
+            row=5, column=0, sticky=tkinter.E, padx=30)
 
         self.__star4 = tkinter.StringVar()
         self.__star4.set("(0)")
         self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star4, font=("Arial Bold", 8)).grid(
-            row=5, column=0, sticky=tkinter.E, padx=30)
+            row=6, column=0, sticky=tkinter.E, padx=30)
 
         self.__star3 = tkinter.StringVar()
         self.__star3.set("(0)")
         self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star3, font=("Arial Bold", 8)).grid(
-            row=6, column=0, sticky=tkinter.E, padx=30)
+            row=7, column=0, sticky=tkinter.E, padx=30)
 
         self.__star2 = tkinter.StringVar()
         self.__star2.set("(0)")
         self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star2, font=("Arial Bold", 8)).grid(
-            row=7, column=0, sticky=tkinter.E, padx=30)
+            row=8, column=0, sticky=tkinter.E, padx=30)
 
         self.__star1 = tkinter.StringVar()
         self.__star1.set("(0)")
         self.__lbl_1star_rating = tkinter.Label(self.window, textvariable=self.__star1, font=("Arial Bold", 8)).grid(
-            row=8, column=0, sticky=tkinter.E, padx=30)
+            row=9, column=0, sticky=tkinter.E, padx=30)
 
         # Window Stays Open until closed
         self.window.mainloop()
