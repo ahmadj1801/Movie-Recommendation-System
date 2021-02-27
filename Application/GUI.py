@@ -159,7 +159,7 @@ class MoviesForm:
         # Set Up Movie Logo
         self.__image_path = self.__image_path = self.__image = self.__lbl_logo = ''
         self.display_logo_picture("../Images/placeholder.png")
-        self.upload_image = tkinter.Button(self.window, text='Upload', width=10, command=self.upload_image).grid(row=2, column=0)
+        self.__upload_image = tkinter.Button(self.window, text='Upload', width=10, command=self.upload_image).grid(row=2, column=0)
         # Set Up Review label
         self.__lbl_review = tkinter.Label(self.window, text="Reviews", font=("Arial Bold", 10)
                                           ).grid(row=4, column=0)
@@ -223,8 +223,11 @@ class MoviesForm:
         title = self.movie_data.save_file_name(self.movie_data, title)
         print(title)
         tkinter.Tk().withdraw()
-        file = askopenfilename(filetypes=[('image types', ('.png', '.jpg'))])
+        file = askopenfilename(filetypes=[('image types', '.png')])
         print(file)
+        new_image = Image.open(file)
+        path = '../Images/Movies/' + title + '.png'
+        new_image = new_image.save(path)
 
     # CallBack on Combo Box
     def option_callback(self, *args):
@@ -235,7 +238,8 @@ class MoviesForm:
         # Get Text from Combo box
         movie_name = str(self.variable.get())
         # Look for Picture Online - look locally
-        file_path = "../Images/" + movie_name
+        file_path = "../Images/Movies/" + self.movie_data.save_file_name(self.movie_data, movie_name) + '.png'
+        print(file_path)
         if not os.path.exists(file_path):
             file_path = "../Images/error.png"
         self.display_logo_picture(file_path)

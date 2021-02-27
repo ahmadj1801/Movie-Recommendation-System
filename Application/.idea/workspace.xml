@@ -188,14 +188,7 @@
       <workItem from="1614054385309" duration="1659000" />
       <workItem from="1614080511919" duration="2840000" />
       <workItem from="1614184337840" duration="3075000" />
-      <workItem from="1614416369182" duration="7664000" />
-    </task>
-    <task id="LOCAL-00006" summary="Gui Script containing classes for each form&#10;Main Class">
-      <created>1613135399010</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1613135399010</updated>
+      <workItem from="1614416369182" duration="9000000" />
     </task>
     <task id="LOCAL-00007" summary="Small changes">
       <created>1613150328683</created>
@@ -533,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614424365132</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Small Changes">
+      <created>1614427290312</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1614427290312</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,22 +593,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1364" height="440" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1613668049771" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614424243660">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614428415565">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614424243660" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614424243660">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614428415565">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614424243660" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614424243660">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614428415565">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614424243660" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614424243660">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614428415565">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614424243660" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
     <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -629,10 +629,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614424376504">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614427375105">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614424376504" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614427375105" />
     <state x="340" y="172" key="git4idea.merge.GitPullDialog" timestamp="1614080589463">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -644,7 +644,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Application$Statistics.coverage" NAME="Statistics Coverage Results" MODIFIED="1613988959971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1614424243410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1614428696734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Application$Movies.coverage" NAME="Movies Coverage Results" MODIFIED="1613152949555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
