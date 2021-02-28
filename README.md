@@ -1,5 +1,15 @@
 # Movie-Recommendation-System
 
+# Packages Needed:
+1. Numpy
+    - pip install numpy
+3. Pandas
+    - pip install pandas
+4. PIL
+    - pip install pillow
+6. Matplotlip
+    - pip install matplotlib
+
 The project contains three Parts:
 1. Viewing Movies
 2. Data Visualization
@@ -7,7 +17,8 @@ The project contains three Parts:
 
 # Viewing Movies
 
-Pick a movie from the combo box and view all the ratings of the movie
+Pick a movie from the combo box and view all the ratings of the movie.
+Image posters are not available for all the movies; however, a button is provided to add an image to a specific movie
 
 # Data Visualization
 
@@ -25,4 +36,4 @@ The user is prompted to rate a few movies that he/she has watched.
     - The Cold Start Problem is not tackled
     - Movies with less than 5 ratings will not be used to generate recommendations
 
-The recommendations are done on a user collaborative approach
+The recommendations are generated on a user collaborative approach
