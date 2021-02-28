@@ -1,5 +1,4 @@
 from GUI import HomeForm
-from Movies import MoviesData
 
 
 def main():

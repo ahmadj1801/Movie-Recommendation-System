@@ -98,7 +98,7 @@ class StatisticsForm:
                                         textvariable=self.variable, width=30).place(x=350, y=60)
         self.__lbl_visual = self.img = self.image_path = ''
         # Default Image to be displayed -> On Creation
-        self.display_image('../Images/data_vis.gif')
+        self.display_image('../Images/Defaults/data_vis.gif')
         # Run
         self.window.mainloop()
 
@@ -158,22 +158,22 @@ class MoviesForm:
                                                                                sticky=tkinter.W, pady=10)
         # Set Up Movie Logo
         self.__image_path = self.__image_path = self.__image = self.__lbl_logo = ''
-        self.display_logo_picture("../Images/placeholder.png")
+        self.display_logo_picture("../Images/Defaults/placeholder.png")
         self.__upload_image = tkinter.Button(self.window, text='Upload Image', width=15, command=self.upload_image).grid(row=2, column=0)
         # Set Up Review label
         self.__lbl_review = tkinter.Label(self.window, text="Reviews", font=("Arial Bold", 10)
                                           ).grid(row=4, column=0)
         # Set up star Images
         self.__lbl_5stars = ''
-        self.display_stars("../Images/5stars.png", self.__lbl_5stars, 5, 0)
+        self.display_stars("../Images/App/5stars.png", self.__lbl_5stars, 5, 0)
         self.__lbl_4stars = ''
-        self.display_stars("../Images/4stars.png", self.__lbl_4stars, 6, 0)
+        self.display_stars("../Images/App/4stars.png", self.__lbl_4stars, 6, 0)
         self.__lbl_3stars = ''
-        self.display_stars("../Images/3stars.png", self.__lbl_3stars, 7, 0)
+        self.display_stars("../Images/App/3stars.png", self.__lbl_3stars, 7, 0)
         self.__lbl_2stars = ''
-        self.display_stars("../Images/2stars.png", self.__lbl_2stars, 8, 0)
+        self.display_stars("../Images/App/2stars.png", self.__lbl_2stars, 8, 0)
         self.__lbl_1stars = ''
-        self.display_stars("../Images/1stars.png", self.__lbl_1stars, 9, 0)
+        self.display_stars("../Images/App/1stars.png", self.__lbl_1stars, 9, 0)
         # Name Label
         self.text = tkinter.StringVar()
         self.text.set("")
@@ -183,7 +183,7 @@ class MoviesForm:
         self.__rating = tkinter.Label(self.window, text="Average Rating", font=("Arial Bold", 10)).grid(row=5, column=1)
         # Star Image
         self.__lbl_rating_stars = ''
-        self.display_stars("../Images/3stars.png", self.__lbl_rating_stars, 6, 1)
+        self.display_stars("../Images/App/3stars.png", self.__lbl_rating_stars, 6, 1)
         # Rating Value
         self.__avg_rating = tkinter.StringVar()
         self.__avg_rating.set("None")
@@ -244,7 +244,7 @@ class MoviesForm:
         file_path_2 = "../Images/Movies/" + self.movie_data.save_file_name(self.movie_data, movie_name) + '.jpg'
 
         if not os.path.exists(file_path) and not os.path.exists(file_path_2):
-            path = "../Images/error.png"
+            path = "../Images/Defaults/error.png"
         else:
             if not os.path.exists(file_path):
                 path = file_path_2
@@ -258,7 +258,7 @@ class MoviesForm:
         total_reviews = self.movie_data.get_total_number_of_reviews(movie_name)
         self.__avg_rating.set(str(avg_rating) + " ( " + str(total_reviews) + " )")
         # Update Stars
-        self.display_stars(self.load_stars(avg_rating), self.__lbl_avg_rating, 5, 1)
+        self.display_stars(self.load_stars(avg_rating), self.__lbl_avg_rating, 6, 1)
         # Set Name in the Label
         self.text.set(self.movie_data.format_name(movie_name))
         ratings = self.movie_data.get_number_of_x_ratings(movie_name, [0, 1.9, 2.9, 3.9, 4.9, 5])
@@ -266,7 +266,7 @@ class MoviesForm:
 
     # Display the Average Rating Star Picture
     def load_stars(self, rating):
-        path = '../Images/'
+        path = '../Images/App/'
         switch = {0: '1stars.png', 1: '1stars.png', 2: '2stars.png', 3: '3stars.png', 4: '4stars.png', 5: '5stars.png'}
         # Choose Lower -> 3.6 displays 3 Stars
         path = path + switch.get(np.floor(rating))

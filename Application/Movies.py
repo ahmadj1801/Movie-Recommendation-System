@@ -110,7 +110,7 @@ class MoviesData:
 
     # Graph Most Reviewed Movies
     def most_reviewed_movies(self):
-        path = '../Images/most_reviewed_movies.png'
+        path = '../Images/Visuals/most_reviewed_movies.png'
         if not os.path.exists(path):
             top_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
             top_5 = top_5['title'].value_counts(ascending=False)
@@ -126,7 +126,7 @@ class MoviesData:
 
     # Graph Least Reviewed Movies
     def least_reviewed_movies(self):
-        path = '../Images/least_reviewed_movies.png'
+        path = '../Images/Visuals/least_reviewed_movies.png'
         if not os.path.exists(path):
             bottom_5 = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId')
             bottom_5 = bottom_5['title'].value_counts(ascending=True)
@@ -142,7 +142,7 @@ class MoviesData:
 
     # Pie Chart
     def movies_per_star_rating(self):
-        path = '../Images/movies_per_star.png'
+        path = '../Images/Visuals/movies_per_star.png'
         if not os.path.exists(path):
             star = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId',
                             how='left').drop(['userId', 'timestamp'], axis=1).groupby(
@@ -160,7 +160,7 @@ class MoviesData:
 
     # Graph Highest Rated Movies
     def highest_rated_movies(self):
-        path = '../Images/highest_rated_movies.png'
+        path = '../Images/Visuals/highest_rated_movies.png'
         if not os.path.exists(path):
             highest = pd.merge(self.movies, self.ratings, left_on='movieId', right_on='movieId').drop(['userId',
                                                                                                        'timestamp',
@@ -186,7 +186,7 @@ class MoviesData:
 
     # Line Graph of Movies Per Year
     def movies_per_year(self):
-        path = '../Images/movies_per_year.png'
+        path = '../Images/Visuals/movies_per_year.png'
         if not os.path.exists(path):
             titles = self.movies['title']
             per_year = dict()
