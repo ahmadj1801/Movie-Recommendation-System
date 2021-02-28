@@ -1,9 +1,8 @@
 import tkinter
 import os
-from tkinter.filedialog import askopenfilename
-
 import numpy as np
 
+from tkinter.filedialog import askopenfilename
 from ML import Recommended
 from Movies import MoviesData
 from tkinter import ttk, messagebox

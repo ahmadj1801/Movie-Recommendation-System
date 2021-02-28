@@ -19,27 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Modified Colours&#10;Graphs for Least and Most Reviewed Movies Done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/Application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/1stars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/2stars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/3stars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/4stars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/5stars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/data_vis.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/data_vis_placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/highest_rated_movies.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/least_reviewed_movies.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/most_reviewed_movies.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/movies_per_star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/movies_per_year.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images/rating.png" beforeDir="false" />
-    </list>
+    <list default="true" id="8c85b15f-f876-4214-9285-a753a66a0888" name="Default Changelist" comment="Modified Colours&#10;Graphs for Least and Most Reviewed Movies Done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -206,14 +186,7 @@
       <workItem from="1614080511919" duration="2840000" />
       <workItem from="1614184337840" duration="3075000" />
       <workItem from="1614416369182" duration="9913000" />
-      <workItem from="1614501093559" duration="4078000" />
-    </task>
-    <task id="LOCAL-00010" summary="Initial designs of View Movies">
-      <created>1613154032333</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1613154032333</updated>
+      <workItem from="1614501093559" duration="4529000" />
     </task>
     <task id="LOCAL-00011" summary="Google stuff -Not working">
       <created>1613161030082</created>
@@ -551,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614504756786</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Updates">
+      <created>1614506163289</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1614506163289</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,7 +551,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Class for Machine Learning&#10;Deleted Google scraping file&#10;Completed GUI for Recommendation system&#10;Removed imports from Application.py" />
     <MESSAGE value="small changes - preparing foe user collaboration filtering" />
     <MESSAGE value="Untidy recommendation Model" />
     <MESSAGE value="Neatening up the recommendation engine" />
@@ -596,7 +575,8 @@
     <MESSAGE value="Small Changes" />
     <MESSAGE value="Code To Add Images - Working" />
     <MESSAGE value="Image Posters Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Image Posters Added" />
+    <MESSAGE value="Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="62" key="#Inspections" timestamp="1613306556809">
@@ -611,22 +591,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1364" height="440" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1613668049771" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614505401110">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614505815011">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614505401110" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614505401110">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614505815011" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614505815011">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614505401110" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614505401110">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614505815011" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614505815011">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614505401110" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614505401110">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614505815011" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614505815011">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614505401110" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614505815011" />
     <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -647,10 +627,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614504773938">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614506183425">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614504773938" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614506183425" />
     <state x="340" y="172" key="git4idea.merge.GitPullDialog" timestamp="1614080589463">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
