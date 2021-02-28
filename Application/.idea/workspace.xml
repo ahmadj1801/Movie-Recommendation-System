@@ -188,21 +188,8 @@
       <workItem from="1614054385309" duration="1659000" />
       <workItem from="1614080511919" duration="2840000" />
       <workItem from="1614184337840" duration="3075000" />
-      <workItem from="1614416369182" duration="9000000" />
-    </task>
-    <task id="LOCAL-00007" summary="Small changes">
-      <created>1613150328683</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1613150328683</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Small changes">
-      <created>1613150402415</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1613150402415</updated>
+      <workItem from="1614416369182" duration="9913000" />
+      <workItem from="1614501093559" duration="2809000" />
     </task>
     <task id="LOCAL-00009" summary="Moved stats code form Movies.py">
       <created>1613150962094</created>
@@ -533,7 +520,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614427290312</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Code To Add Images - Working">
+      <created>1614428772014</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1614428772014</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Code To Add Images - Working">
+      <created>1614428788572</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1614428788572</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +554,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Reformat file" />
     <MESSAGE value="Changes to Recommendation UI" />
     <MESSAGE value="Added Class for Machine Learning&#10;Deleted Google scraping file&#10;Completed GUI for Recommendation system&#10;Removed imports from Application.py" />
     <MESSAGE value="small changes - preparing foe user collaboration filtering" />
@@ -578,7 +578,8 @@
     <MESSAGE value="Comments" />
     <MESSAGE value="Small changes - prep for Adding new Images" />
     <MESSAGE value="Small Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small Changes" />
+    <MESSAGE value="Code To Add Images - Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code To Add Images - Working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="62" key="#Inspections" timestamp="1613306556809">
@@ -593,22 +594,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1364" height="440" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1613668049771" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614428415565">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614429424847">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614428415565">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614429424847" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614429424847">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614428415565">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614429424847" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614429424847">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614428415565">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614429424847" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614429424847">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614428415565" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614429424847" />
     <state width="1323" height="238" key="GridCell.Tab.1.bottom" timestamp="1613989853283">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -629,10 +630,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1613047389761" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614427375105">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1614428800117">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614427375105" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1614428800117" />
     <state x="340" y="172" key="git4idea.merge.GitPullDialog" timestamp="1614080589463">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -644,7 +645,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Application$Statistics.coverage" NAME="Statistics Coverage Results" MODIFIED="1613988959971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1614428696734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Application$Application.coverage" NAME="Application Coverage Results" MODIFIED="1614504490287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Application$Movies.coverage" NAME="Movies Coverage Results" MODIFIED="1613152949555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

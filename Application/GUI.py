@@ -159,7 +159,7 @@ class MoviesForm:
         # Set Up Movie Logo
         self.__image_path = self.__image_path = self.__image = self.__lbl_logo = ''
         self.display_logo_picture("../Images/placeholder.png")
-        self.__upload_image = tkinter.Button(self.window, text='Upload', width=10, command=self.upload_image).grid(row=2, column=0)
+        self.__upload_image = tkinter.Button(self.window, text='Upload Image', width=15, command=self.upload_image).grid(row=2, column=0)
         # Set Up Review label
         self.__lbl_review = tkinter.Label(self.window, text="Reviews", font=("Arial Bold", 10)
                                           ).grid(row=4, column=0)
@@ -222,9 +222,11 @@ class MoviesForm:
         title = str(self.variable.get())
         title = self.movie_data.save_file_name(self.movie_data, title)
         print(title)
-        tkinter.Tk().withdraw()
-        file = askopenfilename(filetypes=[('image types', '.png')])
+        self.window.withdraw()
+        self.window.update()
+        file = askopenfilename(filetypes=[('image types', ('.png', '.jpg'))])
         print(file)
+        self.window.deiconify()
         new_image = Image.open(file)
         path = '../Images/Movies/' + title + '.png'
         new_image = new_image.save(path)
@@ -239,9 +241,17 @@ class MoviesForm:
         movie_name = str(self.variable.get())
         # Look for Picture Online - look locally
         file_path = "../Images/Movies/" + self.movie_data.save_file_name(self.movie_data, movie_name) + '.png'
-        if not os.path.exists(file_path):
-            file_path = "../Images/error.png"
-        self.display_logo_picture(file_path)
+        file_path_2 = "../Images/Movies/" + self.movie_data.save_file_name(self.movie_data, movie_name) + '.jpg'
+
+        if not os.path.exists(file_path) and not os.path.exists(file_path_2):
+            path = "../Images/error.png"
+        else:
+            if not os.path.exists(file_path):
+                path = file_path_2
+            else:
+                path = file_path
+
+        self.display_logo_picture(path)
         # Look for Ratings
         avg_rating = self.movie_data.get_average_rating(movie_name)
         # Total number of ratings
